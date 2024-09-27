@@ -7,11 +7,11 @@ highlighter:      pygments
   #relative_permalinks: true
 
 # Setup
-title:           Personal 
-tagline:          'My personal page'
+title:           'Beatrice Giudici'
+tagline:          'Hi, welcome to my personal page!'
 description:      'This is the personal page of Beatrice Giudici'
 url:              https://beagiudici.github.io
-baseurl:         / 
+baseurl:         
 
 author:
   name:           'Beatrice Giudici'
@@ -20,7 +20,7 @@ author:
     #paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          1.0.0
 
-github:
+github:           
   repo:           https://github.com/BeaGiudici/
