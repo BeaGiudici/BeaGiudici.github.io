@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Personal</title>
+ <title>Beatrice Giudici</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2024-09-27T18:16:37+02:00</updated>
+ <updated>2024-09-27T20:49:22+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Beatrice Giudici</name>
