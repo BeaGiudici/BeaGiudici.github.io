@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
+<!--<div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
@@ -34,4 +34,12 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
+</div>-->
+
+<div>
+  <h1>Home</h1>
+  <p>Welcome to the homepage of the <a href="https://wwwmpa.mpa-garching.mpg.de/ccsnarchive/archive.html">Supernova models</a> project.</p>
+  <p>This project is a collection of supernova models from various groups around the world. The models are stored in a common format and are available for download. The project is hosted by the <a href="https://wwwmpa.mpa-garching.mpg.de/ccsnarchive/archive.html">Max Planck Institute for Astrophysics</a>.</p>
+  <p>For more information, please see the <a href="{{ site.github.repo }}">GitHub repository</a>.</p>
+  <p>Currently v{{ site.version }}</p>
 </div>
