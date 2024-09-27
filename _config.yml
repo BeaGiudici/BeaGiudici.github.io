@@ -4,20 +4,20 @@ highlighter:      pygments
 
 # Permalinks
 #permalink:        pretty
-  #relative_permalinks: true
+#relative_permalinks: true
 
 # Setup
 title:           'Beatrice Giudici'
 tagline:          'My personal page'
-description:      'Hi, I'm glad you're here!'
+description:      'Hi, welcome to my personal page!'
 url:              https://beagiudici.github.io
 baseurl:         
 
 author:
   name:           'Beatrice Giudici'
 
-    #plugins: [jekyll-paginate]
-    #paginate:         5
+plugins: [jekyll-paginate]
+paginate:         5
 
 # Custom vars
 version:          1.0.0
