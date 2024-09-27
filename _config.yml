@@ -11,7 +11,7 @@ title:           'Beatrice Giudici'
 tagline:          'My personal page'
 description:      'Hi, welcome to my personal page!'
 url:              https://beagiudici.github.io
-baseurl:         
+baseurl:         https://beagiudici.github.io
 
 author:
   name:           'Beatrice Giudici'
