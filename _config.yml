@@ -1,3 +1,26 @@
-remote_theme: BeaGiudici/hyde
-title: [My personal page]
-description: [This is my personal page]
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+#permalink:        pretty
+  #relative_permalinks: true
+
+# Setup
+title:           Personal 
+tagline:          'My personal page'
+description:      'This is the personal page of Beatrice Giudici'
+url:              https://beagiudici.github.io
+baseurl:         / 
+
+author:
+  name:           'Beatrice Giudici'
+
+    #plugins: [jekyll-paginate]
+    #paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/BeaGiudici/
