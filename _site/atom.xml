@@ -4,7 +4,7 @@
  <title>Beatrice Giudici</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2024-09-27T21:29:52+02:00</updated>
+ <updated>2024-09-27T22:09:19+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Beatrice Giudici</name>
@@ -13,19 +13,14 @@
 
  
  <entry>
-   <title>What's Jekyll?</title>
-   <link href="http://localhost:4000/2012/02/06/whats-jekyll.html"/>
-   <updated>2012-02-06T00:00:00+01:00</updated>
-   <id>http://localhost:4000/2012/02/06/whats-jekyll</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
+   <title>Who Am I?</title>
+   <link href="http://localhost:4000/2024/09/27/whoami.html"/>
+   <updated>2024-09-27T00:00:00+02:00</updated>
+   <id>http://localhost:4000/2024/09/27/whoami</id>
+   <content type="html">&lt;p&gt;My name is Beatrice Giudici and I am a PhD student at Universitat de València.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It’s an immensely useful tool and one we encourage you to use here with Hyde.&lt;/p&gt;
-
-&lt;p&gt;Find out more by &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am interested in supernova explosions and how the explosion connects to the star that originated it. 
+In order to explore all the aspects of these fascinating phenomena, I rely on numerical simulations.&lt;/p&gt;
 </content>
  </entry>
  
