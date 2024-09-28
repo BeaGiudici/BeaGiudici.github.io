@@ -3,10 +3,11 @@ layout: default
 title: Home
 ---
 
+<img src="volume_hs18_2.png" style="max-width: 100%;">
+
 <div>
-  <h1>Welcome to my homepage!</h1>
-  <p>My name is Beatrice Giudici and I am currently a PhD student at the Universitat de València.</p>
-  <p>My main area of interest is regarding supernovae, the spectacular ending of massive stars.</p>
+  <h1>Welcome to my personal page!</h1>
+  <p>This is a personal page for me to share information about myself and my work. I hope you enjoy it!</p>
 </div>
 
 
@@ -14,7 +15,7 @@ title: Home
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a>
+      <a href="{{ post.url }}">
 	      {{ post.title }}
       </a>
     </h1>
