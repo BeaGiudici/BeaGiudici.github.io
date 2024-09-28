@@ -15,6 +15,7 @@ baseurl:
 
 author:
   name:           'Beatrice Giudici'
+  email:          'bea.giudici96@gmail.com'
 
 plugins: [jekyll-paginate]
 paginate:         5
