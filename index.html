@@ -3,23 +3,27 @@ layout: default
 title: Home
 ---
 
-<!--<div class="posts">
+<div>
+  <h1>Welcome to my homepage!</h1>
+  <p>My name is Beatrice Giudici and I am currently a PhD student at the Universitat de València.</p>
+  <p>My main area of interest is regarding supernovae, the spectacular ending of massive stars.</p>
+</div>
+
+
+<div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
+      <a>
 	      {{ post.title }}
       </a>
     </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
     {{ post.content }}
   </div>
   {% endfor %}
 </div>
 
-<div class="pagination">
+<!--<div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
   {% else %}
@@ -35,9 +39,3 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>-->
-
-<div>
-  <h1>Welcome to my homepage!</h1>
-  <p>My name is Beatrice Giudici and I am currently a PhD student at the Universitat de València.</p>
-  <p>My main area of interest is regarding supernovae, the spectacular ending of massive stars.</p>
-</div>
