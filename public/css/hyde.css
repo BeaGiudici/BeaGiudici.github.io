@@ -141,6 +141,17 @@ a.sidebar-nav-item:focus {
   }
 }
 
+.iframe-content {
+    margin-left: -150px;
+    transform: scale(0.75);
+    transform-origin: top-left;
+    width: 125%;
+    flex-grew: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 125%;
+}
+
 
 /*
  * Reverse layout
