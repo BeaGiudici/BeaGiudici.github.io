@@ -3,18 +3,17 @@ layout: page
 title: Interactive content
 ---
 
-  <div>
-    <iframe class="iframe-content" id="myIframe" src="kpca_rbf_3d_global_elements.html" scrolling="no"></iframe>
-  
-    <script>
-        const iframe = document.getElementById('myIframe');
+<h2> Linear PCA </h2>
+<div class="iframe-container">
+  <iframe class="iframe-content" id="pca" src="media/pca_3d_global_elements.html" scrolling="no"></iframe>
+</div>
 
-        window.addEventListener('message', (event) => {
-            // Optional: Validate the event.origin if you know where the iframe is hosted
-            const { width, height } = event.data;
-            iframe.style.width = width + 'px';
-            iframe.style.height = height + 'px';
-        });
-    </script>
-    </div>
+<h2> kPCA - Gaussian kernel </h2>
+<div class="iframe-container">
+    <iframe class="iframe-content" id="kpca_rbf" src="media/kpca_rbf_3d_global_elements.html" scrolling="no"></iframe>
+  </div>
 
+  <h2> kPCA - Sigmoid kernel </h2>
+<div class="iframe-container">
+    <iframe class="iframe-content" id="kpca_sigmoid" src="media/kpca_sigmoid_3d_global_elements.html" scrolling="no"></iframe>
+  </div>

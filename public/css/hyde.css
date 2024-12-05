@@ -141,15 +141,23 @@ a.sidebar-nav-item:focus {
   }
 }
 
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
 .iframe-content {
-    margin-left: -150px;
-    transform: scale(0.75);
-    transform-origin: top-left;
-    width: 125%;
-    flex-grew: 1;
+    width: 100%;
     border: 1px solid black;
     border-radius: 10px;
-    height: 125%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 
