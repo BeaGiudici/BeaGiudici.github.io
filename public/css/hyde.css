@@ -160,11 +160,23 @@ a.sidebar-nav-item:focus {
     right: 0;
 }
 
-.gltf-container {
+.threejs-container {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 500px;
-  background-color: #000; /* Add a background color for visibility */
-  border: 1px solid #ccc;
+  padding-top: 100%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.threejs-content {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 /*
