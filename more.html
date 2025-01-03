@@ -3,13 +3,45 @@ layout: page
 title: Interactive content
 ---
 <h2> 3D Morphologies </h2>
-
-<h3> Model SW13.1 </h3>
-<p> Isosurfaces at 10% of the maximum density for O16 (blue) and 56Ni (red).</p>
+<p> The following 3D models show the morphologies of the elements in the core-collapse supernova simulations, 1 year after the explosion. 
+  The models are visualized using Three.js and are interactive. You can rotate, zoom, and pan the models using your mouse or trackpad. </p>
+<p> They show the isosurfaces at 10% of the maximum density for He4 (yellow), C12 (cyan), O16 (blue), Si28 (magenta), and 56Ni (red).</p>
 <!-- Div for Three.js Canvas -->
-<div class="threejs-container">
-  <iframe class="iframe-content" id="hs131" src="media/hs131_elements.html" scrolling="no"></iframe>
-</div>
+<div id="frame-container"></div>
+  <!-- <iframe class="iframe-content" id="hs131" src="media/hs131_elements.html" scrolling="no"></iframe> -->
+  <script>
+    const models = [
+      {file: 'paraview_files/w125_elements_all.glb', title: 'Model WH12.5'},
+      {file: 'paraview_files/hs131_elements_all.glb', title: 'Model SW13.1'},
+      {file: 'paraview_files/hs142_elements_all.glb', title: 'Model SW14.2'},
+      {file: 'paraview_files/hs163_elements_all.glb', title: 'Model SW16.3'},
+      {file: 'paraview_files/hs182_elements_all.glb', title: 'Model SW18.2'},
+      // Add more model paths here
+    ];
+
+    const container = document.getElementById('frame-container');
+
+    models.forEach(model => {
+      // Add title element
+      const titleElement = document.createElement('h3');
+      titleElement.textContent = model.title;
+      //titleElement.style.textAlign = 'center'; // Optional: center align titles
+      //titleElement.style.margin = '10px 0';
+      
+      const div = document.createElement('div');
+      div.className = 'threejs-container';
+
+      // Create iframe for the model
+      const iframe = document.createElement('iframe');
+      iframe.className = 'iframe-content';
+      iframe.src = `media/elements.html?model=${encodeURIComponent(model.file)}`;
+      iframe.scrolling = 'no';
+
+      container.appendChild(titleElement);
+      div.appendChild(iframe);
+      container.appendChild(div);
+    });
+  </script>
 
 <h2> Multivariate Analysis </h2>
 
