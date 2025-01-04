@@ -61,7 +61,7 @@
 
   // Load GLTF Model
   const loader = new THREE.GLTFLoader();
-  loader.load('paraview_files/w125_elements_all.glb', function(gltf) {
+  loader.load('paraview_files/w125_elements_all.glb?v=1.0', function(gltf) {
     loadingText.style.display = 'none';  // Hide the loading text once the model is loaded
     const model = gltf.scene; // The loaded GLTF scene
     scene.add(model); // Add the model to the scene
