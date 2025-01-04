@@ -4,13 +4,16 @@
 </div>
 
 <div id="legend" style="position: absolute; top: 10px; left: 20px;">
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    <li><button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button></li>
-    <li><button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button></li>
-    <li><button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button></li>
-    <li><button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button></li>
-    <li><button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button></li>
-  </ul>
+  <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
+  <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
+  <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
+  <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
+  <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
+</div>
+
+<div id="container">
+  <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+  <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
 </div>
 
 <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
@@ -40,8 +43,20 @@
   const container = document.getElementById("threejs-canvas");
   container.appendChild(renderer.domElement);
   renderer.setSize(window.innerWidth, window.innerHeight); // Set size (adjust to container's dimensions)
-  scene.background = new THREE.Color(0xffffff);
+  scene.background = new THREE.Color(0xf1f1f1);
 
+  // Get the button elements by ID
+  const blackBtn = document.getElementById('blackb');
+  const whiteBtn = document.getElementById('whiteb');
+  
+  // Set the background color of the scene
+  blackBtn.addEventListener('click', () => {
+    scene.background = new THREE.Color(0x333333);
+  });
+
+  whiteBtn.addEventListener('click', () => {
+    scene.background = new THREE.Color(0xf1f1f1);
+  });
   const meshes = {}; // Store meshes for toggling visibility
 
   // Load GLTF Model
@@ -162,9 +177,32 @@
   .element-button {
     margin: 5px;
     color: black;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: 1px solid black;
     border-radius: 50%;
+    cursor: pointer;
+    font-family: "PT Sans";
+    font-size: 20px;
+  }
+
+  /* Container for buttons */
+  #container {
+      position: fixed;
+      bottom: 20px; /* Distance from the bottom */
+      right: 20px;  /* Distance from the right */
+      display: flex;
+      flex-direction: row; /* Stack buttons vertically */
+      gap: 10px; /* Space between buttons */
+    }
+
+  .background-button {
+    margin: 5px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
   }
 </style>
