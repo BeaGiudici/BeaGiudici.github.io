@@ -27,6 +27,24 @@
         {% endif %}
       {% endfor %}
 
+      <div class="interactive-menu">
+
+        <input type="checkbox" id="toggle-interactive" class="toggle-checkbox">
+        <label for="toggle-interactive" class="interactive-title">Interactive Content</label>
+
+        <ul class="interactive-list">
+          {% assign pages_list = site.pages %}
+          {% for node in pages_list %}
+            {% if node.title != null %}
+              {% if node.layout == "list" %}
+                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+      </div>
+
       <a class="sidebar-nav-item" href="https://wwwmpa.mpa-garching.mpg.de/ccsnarchive/archive.html" target="_blank">Supernova models</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}" target="_blank">GitHub</a>
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>

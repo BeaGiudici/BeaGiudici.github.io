@@ -114,6 +114,40 @@ a.sidebar-nav-item:focus {
   }
 }
 
+/* Hide the list initially */
+.interactive-list {
+  display: none;
+  list-style: circle;
+  margin-top: 10px;
+}
+.interactive-list.active {
+  font-weight: bold;
+  display: block;
+}
+
+/* Show the list when the checkbox is checked */
+.toggle-checkbox:checked + .interactive-title + .interactive-list,
+.interactive-list a.active {
+  display: block;
+}
+
+/* Hide the checkbox itself */
+.toggle-checkbox {
+  display: none;
+}
+
+/* Add styles for the clickable title */
+.interactive-title {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block;
+}
+.interactive-title:hover {
+  text-decoration: underline;
+}
+
 
 /* Container
  *
