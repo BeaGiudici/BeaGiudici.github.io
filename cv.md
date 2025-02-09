@@ -71,7 +71,7 @@ Private lessons of physics and mathematics to high school and bachelor's student
 
 ## Publications
 
-1. F. Cipolletta, J.V. Kalinani, E. Giangrandi, B. Giacomazzo, R. Ciolfi, L. Sala, **B. Giudici**, *Spritz: general relativistic magnetohydrodynamics with neutrinos*, Classical and Quantum Gravity, vol. 38, no. 8, p. 085021, Mar. 2021, **DOI** [10.1088/1361-6382/abebb7](https://iopscience.iop.org/article/10.1088/1361-6382/abebb7).
+1. F. Cipolletta, J.V. Kalinani, E. Giangrandi, B. Giacomazzo, R. Ciolfi, L. Sala, **B. Giudici**, *Spritz: general relativistic magnetohydrodynamics with neutrinos*, Classical and Quantum Gravity, vol. 38, no. 8, p. 085021, Mar. 2021, **DOI** [10.1088/1361-6382/abebb7](https://iopscience.iop.org/article/10.1088/1361-6382/abebb7){:target="_blank"}.
 
 ---
 
@@ -79,17 +79,45 @@ Private lessons of physics and mathematics to high school and bachelor's student
 
 ### Invited talks
 
+1. "The Violent Beauty of Supernova Explosions". Escola d’Estiu Erasmus de Física (E3F). 04 September 2023. Universitat de València, València, Spain (outreach).
+
 ### Contributed talks
+
+1. "Supernovae From Red Super Giant Stars". [PHAROS Conference 2022](https://indico.ice.csic.es/event/29/overview){:target="_blank"}. 16-19 May 2022. Università "La Sapienza", Rome, Italy.
+2. "Supernovae From Red Super Giant Stars". [2nd Workshop on Compact Objects, Gravitational Waves and Deep Learning](https://indico.global/event/9015/overview){:target="_blank"}. 20-23 June 2022. ADEIT - Universitat de València, València, Spain.
+3. "Supernovae From Red Super Giant Stars". 3D Supernova (Remnants). How to connect simulations and observations?. 5-8 September 2022. ADEIT - Universitat de València, València, Spain. 
+4. "Instabilities in CCSNe: the study of 14 red super giant progenitor models in 3D". [Anisotropies in core-collapse supernova explosions 2](https://indico.ict.inaf.it/event/2537/){:target="_blank"}. 23-26 October 2023. Palermo, Italy.
+5. "Instabilities in CCSNe: the study of 14 red super giant progenitor models in 3D". [Supervirtual 2023](https://sites.google.com/view/supervirtual2023/){:target="_blank"}. 6-10 November 2023. Online.
+6. "Hydrodynamic instabilities in three-dimensional simulations of neutrino-driven supernovae of 14 red supergiant". [European Astronomical Society (EAS) Annual Meeting 2024](https://eas.unige.ch/EAS2024/){:target="_blank"}. 01 - 05 July 2024. Padua, Italy.
+7. "Hydrodynamic of Long-Time Core-Collapse Supernovae: the Case of 12 Red Supergiant Progenitors". [CoCoNut Meeting 2024](https://eventos.adeit.es/119383/detail/coconut-meeting-2024.html){:target="_blank"}. 11 - 13 December 2024. ADEIT - Universitat de València, València, Spain. 
 
 ### Posters
 
+1. "Supernovae From Red Super Giant Stars". [@FlipPhysics](https://indico.ific.uv.es/event/6372/overview){:target="_blank"}. 21-25 March 2022. IFIC - Universitat de València. València, Spain.
+2. "Supernovae From Red Super Giant Stars". [European Astronomical Society (EAS) Annual Meeting 2022](https://eas.unige.ch/EAS2022/){:target="_blank"}. June 27th - July 1st 2022. València, Spain.
+3. "Hydrodynamic instabilities in 3D simulations of neutrino-driven CCSNe from RSG progenitors" (S4.9). [Supernova Renmants III - An Odyssey in Space After Stellar Death](https://snr2024.astro.noa.gr/){:target="_blank"}. 9 - 15 June 2024. Chania, Crete, Greece.
+
 ### Organization committee
+
+1. 3D Supernova (Remnants). How to connect simulations and observations?, 5 - 8 September 2022, ADEIT - Universitat de València, València, Spain.
 
 ---
 
 ## Skills
 
-### Languages
+**Digital competence**:
+- Good command of office suite (word processor, spread sheet, etc.).
+- Programming Languages: FORTRAN90, C, C++, ROOT, Python, MATLAB, and Julia.
+- Good skills in writing scientific papers using \LaTeX.
+- Good knowledge of cluster architecture: I performed simulations on GALILEO and MARCONI machines at CINECA consortium, through the allocation `INF20_teongrav` and, currently, I have access to the supercomputer LluisVives of the Universitat de València.
+
+**Team working**: Can quickly assess situations and collaborate to find best practice solutions.
+
+Good mathematical skills and quick problem solving.
+
+---
+
+## Languages
 - Italian (native)
 - English (C1)
 - Spanish (B2)
