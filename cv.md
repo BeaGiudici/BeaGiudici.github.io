@@ -6,10 +6,10 @@ title: Curriculum Vitae
 ---
 
 ## Personal data 
-Date of birth: October 4th, 1996  
-Nationality: Italian  
-Personal email: <bea.giudici96@gmail.com>  
-ORCID ID: [https://orcid.org/0000-0002-8603-4302](https://orcid.org/0000-0002-8603-4302)
+**Date of birth**: October 4th, 1996  
+**Nationality**: Italian  
+**Personal email**: <bea.giudici96@gmail.com>  
+**ORCID ID**: [https://orcid.org/0000-0002-8603-4302](https://orcid.org/0000-0002-8603-4302)
 
 ---
 
@@ -41,7 +41,7 @@ Supervisor: Prof. Massimo Dotti
 
 ### 2010 - 2015
 
-#### High school Liceo Scientifico Statale Alessandro Antonelli** (Novara)
+#### High school Liceo Scientifico Statale Alessandro Antonelli (Novara)
 
 Grade: 100/100
 
@@ -53,7 +53,7 @@ Grade: 100/100
 
 #### Tutor for the Bachelor-level course 'Astrophysics Laboratory'
 
-The course introduces the techniques for observational astrophysics, allowing the students to have first experience in sources observation and signal calibration. The tutor has to help the students dealing with data analysis. This activity has been done remotely due to Covid-19 pandemic.
+The course introduces the techniques for observational astrophysics, allowing the students to have first experience in sources observation and signal calibration. The tutor has to help the students dealing with data analysis. This activity has been done remotely due to COVID-19 pandemic.
 
 ### 2018- 2020
 
