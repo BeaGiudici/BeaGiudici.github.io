@@ -63,9 +63,9 @@
     const model = gltf.scene; // The loaded GLTF scene
     scene.add(model); // Add the model to the scene
     const elementSettings = {
-	    mesh0: {opacity: 1.0, transparent: false}, 
-      mesh1: {opacity: 0.3, transparent: true}, 
-      mesh2: {opacity: 0.75, transparent: true}, 
+	    mesh0: {opacity: 1.0, transparent: false, depthWrite: true}, 
+      mesh1: {opacity: 0.3, transparent: true, depthWrite: false}, 
+      mesh2: {opacity: 0.4, transparent: true, depthWrite: false}, 
     };
 
     model.traverse((node) => {
@@ -78,6 +78,7 @@
         node.material.transparent = elementSettings[node.name].transparent;
         node.material.opacity = elementSettings[node.name].opacity;
         node.material.needsUpdate = true;
+        node.material.depthWrite = elementSettings[node.name].depthWrite; // Prevent depth writing for shocks
 
         // Use alphaMap if applicable
         if (node.material.map) {
@@ -142,7 +143,6 @@
   directionalLight2.position.set(-1, -1, -1).normalize();
   directionalLight2.intensity = 0.85; // Increase brightness
   scene.add(directionalLight2);
-
 
   // add a hemisphere light (simulates sky-ground lighting)
   //const hemiLight = new THREE.HemisphereLight(0xffffff, 0x404040, 1.5);

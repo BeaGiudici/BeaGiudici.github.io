@@ -10,9 +10,11 @@ title: Nickel Ejecta
 <!-- Div for Three.js Canvas -->
 <div id="frame-container"></div>
   <!-- <iframe class="iframe-content" id="hs131" src="media/hs131_elements.html" scrolling="no"></iframe> -->
+  <input type="range" id="timeSlider" min="0" max="4" value="0" step="1" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 300px;">  
   <script>
     const models = [
-      {file: 'paraview_files/w12_5_sb2.gltf', title: 'Model WH12.5'},
+      {file: 'w12_5_sb1.gltf', title: 'Model WH12.5'},
+      {file: 'w12_5_sb2.gltf', title: 'Model WH12.5'},
     ];
 
     const container = document.getElementById('frame-container');
@@ -30,7 +32,7 @@ title: Nickel Ejecta
       // Create iframe for the model
       const iframe = document.createElement('iframe');
       iframe.className = 'iframe-content';
-      iframe.src = `media/ejecta.html?model=${encodeURIComponent(model.file)}`;
+      iframe.src = `media/shocks/ejecta.html?model=${encodeURIComponent(model.file)}`;
       iframe.scrolling = 'no';
 
       container.appendChild(titleElement);
