@@ -63,9 +63,9 @@
     const model = gltf.scene; // The loaded GLTF scene
     scene.add(model); // Add the model to the scene
     const elementSettings = {
-	    mesh0: {opacity: 1.0}, 
-      mesh1: {opacity: 0.3}, 
-      mesh2: {opacity: 0.75}, 
+	    mesh0: {opacity: 1.0, transparent: false}, 
+      mesh1: {opacity: 0.3, transparent: true}, 
+      mesh2: {opacity: 0.75, transparent: true}, 
     };
 
     model.traverse((node) => {
@@ -75,7 +75,7 @@
         meshes[node.name] = node;
 
         // Apply initial material settings
-        node.material.transparent = true;
+        node.material.transparent = elementSettings[node.name].transparent;
         node.material.opacity = elementSettings[node.name].opacity;
         node.material.needsUpdate = true;
 
@@ -129,11 +129,24 @@
 
   // Add ambient light and a directional light to illuminate the scene
   const ambientLight = new THREE.AmbientLight(0x404040, 1); // Soft ambient light
+  ambientLight.intensity = 0.75; // Increase brightness
   scene.add(ambientLight);
   
   const directionalLight = new THREE.DirectionalLight(0xffffff, 2);  // Strong directional light (like sunlight)
-  directionalLight.position.set(1,0,1).normalize();
+  directionalLight.position.set(1,1,1).normalize();
+  directionalLight.intensity = 0.85; // Increase brightness
   scene.add(directionalLight);
+
+  // add second directoinal light from opposite direction
+  const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1.5);
+  directionalLight2.position.set(-1, -1, -1).normalize();
+  directionalLight2.intensity = 0.85; // Increase brightness
+  scene.add(directionalLight2);
+
+
+  // add a hemisphere light (simulates sky-ground lighting)
+  //const hemiLight = new THREE.HemisphereLight(0xffffff, 0x404040, 1.5);
+  //scene.add(hemiLight);
 
   // Adjust camera position
   camera.position.z = -25;
