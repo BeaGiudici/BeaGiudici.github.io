@@ -249,6 +249,18 @@ a.sidebar-nav-item:focus {
   font-size: 20px;
 }
 
+.element-button {
+  margin: 5px;
+  color: black;
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: "PT Sans";
+  font-size: 20px;
+}
+
 /* container for legend */
 #legend {
   position: absolute;

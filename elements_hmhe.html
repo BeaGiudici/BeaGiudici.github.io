@@ -3,40 +3,186 @@ layout: default
 title: High mass - High energy models
 ---
 
+<!-- Three.js Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+<!-- OrbitControls.js Script -->
+<script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
 <h2> High mass - High energy models </h2>
-<!-- Div for Three.js Canvas -->
-<div id="frame-container"></div>
-  <!-- <iframe class="iframe-content" id="hs131" src="media/hs131_elements.html" scrolling="no"></iframe> -->
-  <script>
-    const models = [
-      {file: 'elements/hs198_elements_all.glb', title: 'Model SW19.8'},
-      {file: 'elements/hs255_elements_all.glb', title: 'Model SW25.5'},
-      {file: 'elements/hs256_elements_all.glb', title: 'Model SW25.6'},
-      {file: 'elements/hs262_elements_all.glb', title: 'Model SW26.2'},
-      {file: 'elements/hs27_elements_all.glb', title: 'Model SW27.0'},
-      {file: 'elements/hs273_elements_all.glb', title: 'Model SW27.3'},
-    ];
 
-    const container = document.getElementById('frame-container');
+<!-- MODEL HS19.8 -->
 
-    models.forEach(model => {
-      // Add title element
-      const titleElement = document.createElement('h3');
-      titleElement.textContent = model.title;
-      //titleElement.style.textAlign = 'center'; // Optional: center align titles
-      //titleElement.style.margin = '10px 0';
-      
-      const div = document.createElement('div');
-      div.className = 'threejs-container';
-
-      // Create iframe for the model
-      const iframe = document.createElement('iframe');
-      iframe.className = 'iframe-content';
-      iframe.src = `media/elements.html?model=${encodeURIComponent(model.file)}`;
-      iframe.scrolling = 'no';
-
-      container.appendChild(titleElement);
-      div.appendChild(iframe);
-      container.appendChild(div);
-    });
+<h3>Model SW19.8</h3>
+<script>
+  // Ensure `timeSteps` is available globally
+  window.modelFile =  'media/elements/hs198_elements_all.glb';
 </script>
+
+<!-- Define the container -->
+<div class="threejs-container">
+  <div id="threejs-canvas", tag="hs131"></div>
+  
+  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
+    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
+    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
+    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
+    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
+    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
+  </div>
+  
+  <div id="container">
+    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
+  </div>
+  
+  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+    <h2>Loading...</h2>
+  </div>  
+
+  <!-- Load JavaScript Files -->
+  <script src="media/setupScene.js"></script>
+  <script src="media/elements/loadModel.js"></script>
+  
+</div>
+
+<!-- MODEL HS25.5 -->
+
+<h3>Model SW25.5</h3>
+<script>
+  // Ensure `timeSteps` is available globally
+  window.modelFile =  'media/elements/hs255_elements_all.glb';
+</script>
+
+<!-- Define the container -->
+<div class="threejs-container">
+  <div id="threejs-canvas", tag="hs131"></div>
+  
+  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
+    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
+    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
+    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
+    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
+    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
+  </div>
+  
+  <div id="container">
+    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
+  </div>
+  
+  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+    <h2>Loading...</h2>
+  </div>  
+
+  <!-- Load JavaScript Files -->
+  <script src="media/setupScene.js"></script>
+  <script src="media/elements/loadModel.js"></script>
+  
+</div>
+
+<!-- MODEL HS26.2 -->
+
+<h3>Model SW26.2</h3>
+<script>
+  // Ensure `timeSteps` is available globally
+  window.modelFile =  'media/elements/hs262_elements_all.glb';
+</script>
+
+<!-- Define the container -->
+<div class="threejs-container">
+  <div id="threejs-canvas", tag="hs131"></div>
+  
+  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
+    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
+    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
+    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
+    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
+    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
+  </div>
+  
+  <div id="container">
+    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
+  </div>
+  
+  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+    <h2>Loading...</h2>
+  </div>  
+
+  <!-- Load JavaScript Files -->
+  <script src="media/setupScene.js"></script>
+  <script src="media/elements/loadModel.js"></script>
+  
+</div>
+
+<!-- MODEL HS27.0 -->
+
+<h3>Model SW27.0</h3>
+<script>
+  // Ensure `timeSteps` is available globally
+  window.modelFile =  'media/elements/hs27_elements_all.glb';
+</script>
+
+<!-- Define the container -->
+<div class="threejs-container">
+  <div id="threejs-canvas", tag="hs131"></div>
+  
+  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
+    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
+    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
+    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
+    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
+    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
+  </div>
+  
+  <div id="container">
+    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
+  </div>
+  
+  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+    <h2>Loading...</h2>
+  </div>  
+
+  <!-- Load JavaScript Files -->
+  <script src="media/setupScene.js"></script>
+  <script src="media/elements/loadModel.js"></script>
+  
+</div>
+
+<!-- MODEL HS27.3 -->
+
+<h3>Model SW27.3</h3>
+<script>
+  // Ensure `timeSteps` is available globally
+  window.modelFile =  'media/elements/hs273_elements_all.glb';
+</script>
+
+<!-- Define the container -->
+<div class="threejs-container">
+  <div id="threejs-canvas", tag="hs131"></div>
+  
+  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
+    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
+    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
+    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
+    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
+    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
+  </div>
+  
+  <div id="container">
+    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
+  </div>
+  
+  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+    <h2>Loading...</h2>
+  </div>  
+
+  <!-- Load JavaScript Files -->
+  <script src="media/setupScene.js"></script>
+  <script src="media/elements/loadModel.js"></script>
+  
+</div>

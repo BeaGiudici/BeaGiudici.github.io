@@ -3,13 +3,6 @@ layout: list
 title: Nickel Ejecta
 ---
 
-
-<p>
-  The following 3D representations protray the 56Ni ejecta (colour-coded with the velecity, more redder means higher velocity and bluer means lower velocity) with the forward (red surface) and reverse (yellow surface) shocks
-</p>
-
-<h2>Model WH12.5</h2>
-
 <!-- Three.js Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -17,20 +10,24 @@ title: Nickel Ejecta
 <!-- OrbitControls.js Script -->
 <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
+<p>
+  The following 3D representations protray the 56Ni ejecta (colour-coded with the velecity, more redder means higher velocity and bluer means lower velocity) with the forward (red surface) and reverse (yellow surface) shocks
+</p>
+
+<h2>Model WH12.5</h2>
+
 <!-- Define the container -->
 <div class="threejs-container">
   <div id="threejs-canvas"></div>
-
   
-  <div id="frame-container"></div>
-<!-- Time Step Slider -->
+  <!-- Time Step Slider -->
   <input type="range" id="timeSlider" min="0" max="2" value="0" step="1" 
       style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 300px;">
 
-      <div id="legend">
-        <button class="shock-button" id="toggle_mesh1" style="background-color: red;">Forward shock</button>
-        <button class="shock-button" id="toggle_mesh2" style="background-color: yellow;">Reverse shock</button>
-      </div>
+  <div id="legend">
+    <button class="shock-button" id="toggle_mesh1" style="background-color: red;">Forward shock</button>
+    <button class="shock-button" id="toggle_mesh2" style="background-color: yellow;">Reverse shock</button>
+  </div>
 
   <div id="container">
     <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>

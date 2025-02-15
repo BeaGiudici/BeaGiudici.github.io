@@ -1,76 +1,86 @@
-// Get the correct container
-const container = document.getElementById("threejs-canvas");
+document.querySelectorAll(".threejs-container").forEach(container => {
+  // Get the correct canvas
+  const canvas = container.querySelector("#threejs-canvas")
 
-// Set up basic Three.js Scene
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 100);
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+  // Set up basic Three.js Scene
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
 
-// Ensure renderer is inside the container
-renderer.setSize(container.clientWidth, container.clientHeight);
-container.appendChild(renderer.domElement);
+  // Ensure renderer is inside the canvas
+  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+  canvas.appendChild(renderer.domElement);
 
-// Scene background color
-scene.background = new THREE.Color(0xf1f1f1); // Set background to black
+  // Scene background color
+  scene.background = new THREE.Color(0xf1f1f1); // Set background to creme
 
-// Get the button elements by ID
-const blackBtn = document.getElementById('blackb');
-const whiteBtn = document.getElementById('whiteb');
+  // Store scene, camera, and renderer inside the container element
+  container.scene = scene;
+  container.camera = camera;
+  container.renderer = renderer;
 
-// Set the background color of the scene
-blackBtn.addEventListener('click', () => {
-  scene.background = new THREE.Color(0x333333);
-});
+  // Get the button elements by ID
+  const blackBtn = container.querySelector('#blackb');
+  const whiteBtn = container.querySelector('#whiteb');
 
-whiteBtn.addEventListener('click', () => {
-  scene.background = new THREE.Color(0xf1f1f1);
-});
+  // Set the background color of the scene
+  if (blackBtn && whiteBtn) {
+    console.log('getting buttons');
+    blackBtn.addEventListener('click', () => {
+        scene.background = new THREE.Color(0x333333);
+    });
 
-// Add ambient light and a directional light to illuminate the scene
-const ambientLight = new THREE.AmbientLight(0x404040, 1); // Soft ambient light
-ambientLight.intensity = 0.75; // Increase brightness
-scene.add(ambientLight);
+    whiteBtn.addEventListener('click', () => {
+        scene.background = new THREE.Color(0xf1f1f1);
+    });
+  }
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 2);  // Strong directional light (like sunlight)
-directionalLight.position.set(1,1,1).normalize();
-directionalLight.intensity = 0.85; // Increase brightness
-scene.add(directionalLight);
+  // Add ambient light and a directional light to illuminate the scene
+  const ambientLight = new THREE.AmbientLight(0x404040, 1); // Soft ambient light
+  ambientLight.intensity = 0.75; // Increase brightness
+  scene.add(ambientLight);
 
-// add second directoinal light from opposite direction
-const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1.5);
-directionalLight2.position.set(-1, -1, -1).normalize();
-directionalLight2.intensity = 0.85; // Increase brightness
-scene.add(directionalLight2);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 2);  // Strong directional light (like sunlight)
+  directionalLight.position.set(1,1,1).normalize();
+  directionalLight.intensity = 0.85; // Increase brightness
+  scene.add(directionalLight);
 
-// add a hemisphere light (simulates sky-ground lighting)
-//const hemiLight = new THREE.HemisphereLight(0xffffff, 0x404040, 1.5);
-//scene.add(hemiLight);
+  // add second directoinal light from opposite direction
+  const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1.5);
+  directionalLight2.position.set(-1, -1, -1).normalize();
+  directionalLight2.intensity = 0.85; // Increase brightness
+  scene.add(directionalLight2);
 
-// Adjust camera position
-camera.position.z = -20;
+  // add a hemisphere light (simulates sky-ground lighting)
+  //const hemiLight = new THREE.HemisphereLight(0xffffff, 0x404040, 1.5);
+  //scene.add(hemiLight);
 
-// Initialize OrbitControls (allows for dragging, rotating, and zooming)
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true; // Enable smoother controls
-controls.dampingFactor = 0.25;
-controls.screenSpacePanning = false; // Set this to 'false' if you want to disable panning
-controls.minPolarAngle = 0; // Limit vertical rotation
-controls.maxPolarAngle = 2.0 * Math.PI; // Limit vertical rotation
+  // Adjust camera position
+  camera.position.set(-21,-21,-21)
 
-// Create an animation loop to render the scene and update it every frame
-function animate() {
-    requestAnimationFrame(animate);
-     controls.update(); 
-  renderer.render(scene, camera);
-}
+  // Initialize OrbitControls (allows for dragging, rotating, and zooming)
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; // Enable smoother controls
+  controls.dampingFactor = 0.25;
+  controls.screenSpacePanning = false; // Set this to 'false' if you want to disable panning
+  controls.minPolarAngle = 0; // Limit vertical rotation
+  controls.maxPolarAngle = 2.0 * Math.PI; // Limit vertical rotation
 
-animate();
+  // Create an animation loop to render the scene and update it every frame
+  function animate() {
+      requestAnimationFrame(animate);
+      controls.update(); 
+    renderer.render(scene, camera);
+  }
 
-// Handle window resizing (maintain rendering size on resize)
-window.addEventListener('resize', () => {
-  const width = document.getElementById('threejs-canvas').clientWidth;
-  const height = document.getElementById('threejs-canvas').clientHeight;
-  renderer.setSize(width, height);
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
+  animate();
+
+  // Handle window resizing (maintain rendering size on resize)
+  window.addEventListener('resize', () => {
+    const width = container.querySelector("#threejs-canvas").clientWidth;
+    const height = container.querySelector("#threejs-canvas").clientHeight;
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+  });
 });
