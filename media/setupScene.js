@@ -47,14 +47,15 @@ scene.add(directionalLight2);
 //scene.add(hemiLight);
 
 // Adjust camera position
-camera.position.z = -25;
+camera.position.z = -20;
 
 // Initialize OrbitControls (allows for dragging, rotating, and zooming)
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true; // Enable smoother controls
-  controls.dampingFactor = 0.25;
-  controls.screenSpacePanning = false; // Set this to 'false' if you want to disable panning
-  // controls.maxPolarAngle = Math.PI / 2; // Limit vertical rotation
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true; // Enable smoother controls
+controls.dampingFactor = 0.25;
+controls.screenSpacePanning = false; // Set this to 'false' if you want to disable panning
+controls.minPolarAngle = 0; // Limit vertical rotation
+controls.maxPolarAngle = 2.0 * Math.PI; // Limit vertical rotation
 
 // Create an animation loop to render the scene and update it every frame
 function animate() {
