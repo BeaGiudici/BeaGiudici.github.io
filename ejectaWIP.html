@@ -1,7 +1,11 @@
+---
+layout: list
+title: Nickel Ejecta
+---
 
 
 <p>
-  The following 3D representations protray the 56Ni ejecta (solid blue surface) with the forward (red surface) and reverse (yellow surface) shocks
+  The following 3D representations protray the 56Ni ejecta (colour-coded with the velecity, more redder means higher velocity and bluer means lower velocity) with the forward (red surface) and reverse (yellow surface) shocks
 </p>
 
 <h2>Model WH12.5</h2>
@@ -12,67 +16,46 @@
 
 <!-- OrbitControls.js Script -->
 <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<!-- Time Step Slider -->
-<input type="range" id="timeSlider" min="0" max="2" value="0" step="1" 
-     style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 300px;">
 
-<!-- Load JavaScript Files -->
-<script src="media/shocks/setupScene.js"></script>
-
-<div id="frame-container"></div>
-
+<!-- Define the container -->
 <div class="threejs-container">
   <div id="threejs-canvas"></div>
+
+  
+  <div id="frame-container"></div>
+<!-- Time Step Slider -->
+  <input type="range" id="timeSlider" min="0" max="2" value="0" step="1" 
+      style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 300px;">
+
+      <div id="legend">
+        <button class="shock-button" id="toggle_mesh1" style="background-color: red;">Forward shock</button>
+        <button class="shock-button" id="toggle_mesh2" style="background-color: yellow;">Reverse shock</button>
+      </div>
+
+  <div id="container">
+    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
+  </div>
+
+  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+    <h2>Loading...</h2>
+  </div>
+
+  <script>
+    // Define the model file paths here
+    const timeSteps = [
+        "media/shocks/w12_5_sb1.gltf",
+        "media/shocks/w12_5_sb2.gltf",
+    ];
+  
+    // Ensure `timeSteps` is available globally
+    window.timeSteps = timeSteps;
+  </script>
+  
+
+  <!-- Load JavaScript Files -->
+  <script src="media/setupScene.js"></script>
+  <script src="media/shocks/loadModel.js"></script>
+  
 </div>
 
-<div id="legend" style="position: absolute; top: 10px; left: 20px;">
-  <button class="shock-button" id="toggle_mesh1" style="background-color: red;">Forward shock</button>
-  <button class="shock-button" id="toggle_mesh2" style="background-color: yellow;">Reverse shock</button>
-</div>
-
-<div id="container">
-  <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
-  <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
-</div>
-
-<div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
-  <h2>Loading...</h2>
-</div>
-
-<style>
-  .threejs-canvas canvas {
-    display: block; /* Remove margin that can cause issues */
-  }
-
-  .shock-button {
-    margin: 5px;
-    color: black;
-    width: 120px;
-    height: 60px;
-    border: 1px solid black;
-    border-radius: 10%;
-    cursor: pointer;
-    font-family: "PT Sans";
-    font-size: 20px;
-  }
-
-  /* Container for buttons */
-  #container {
-      position: fixed;
-      bottom: 20px; /* Distance from the bottom */
-      right: 20px;  /* Distance from the right */
-      display: flex;
-      flex-direction: row; /* Stack buttons vertically */
-      gap: 10px; /* Space between buttons */
-    }
-
-  .background-button {
-    margin: 5px;
-    color: black;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding: 10px 15px;
-    cursor: pointer;
-  }
-</style>

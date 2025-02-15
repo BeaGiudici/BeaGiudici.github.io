@@ -1,7 +1,3 @@
----
-layout: list
-title: Nickel Ejecta
----
 
 <p>
   The following 3D representations protray the 56Ni ejecta (solid red surface) with the forward (red surface) and reverse (yellow surface) shocks
@@ -12,7 +8,7 @@ title: Nickel Ejecta
   <!-- <iframe class="iframe-content" id="hs131" src="media/hs131_elements.html" scrolling="no"></iframe> -->
   <script>
     const models = [
-      {file: 'w12_5_sb1.gltf', title: 'Model WH12.5'},
+      {files: 'w12_5_sb1.gltf', title: 'Model WH12.5'},
       {file: 'w12_5_sb2.gltf', title: 'Model WH12.5'},
     ];
 
@@ -30,7 +26,7 @@ title: Nickel Ejecta
 
       // Create iframe for the model
       const iframe = document.createElement('iframe');
-      iframe.className = 'iframe-content';
+      iframe.className = 'threejs-content';
       iframe.src = `media/shocks/ejecta.html?model=${encodeURIComponent(model.file)}`;
       iframe.scrolling = 'no';
 

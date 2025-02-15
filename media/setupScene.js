@@ -1,25 +1,30 @@
-// Initialize Three.js scene
-  // Set up basic Three.js Scene
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
-  const renderer = new THREE.WebGLRenderer();
-  const container = document.getElementById("threejs-canvas");
-  container.appendChild(renderer.domElement);
-  renderer.setSize(window.innerWidth, window.innerHeight); // Set size (adjust to container's dimensions)
+// Get the correct container
+const container = document.getElementById("threejs-canvas");
+
+// Set up basic Three.js Scene
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 100);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+
+// Ensure renderer is inside the container
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
+
+// Scene background color
+scene.background = new THREE.Color(0xf1f1f1); // Set background to black
+
+// Get the button elements by ID
+const blackBtn = document.getElementById('blackb');
+const whiteBtn = document.getElementById('whiteb');
+
+// Set the background color of the scene
+blackBtn.addEventListener('click', () => {
+  scene.background = new THREE.Color(0x333333);
+});
+
+whiteBtn.addEventListener('click', () => {
   scene.background = new THREE.Color(0xf1f1f1);
-
-  // Get the button elements by ID
-  const blackBtn = document.getElementById('blackb');
-  const whiteBtn = document.getElementById('whiteb');
-  
-  // Set the background color of the scene
-  blackBtn.addEventListener('click', () => {
-    scene.background = new THREE.Color(0x333333);
-  });
-
-  whiteBtn.addEventListener('click', () => {
-    scene.background = new THREE.Color(0xf1f1f1);
-  });
+});
 
 // Add ambient light and a directional light to illuminate the scene
 const ambientLight = new THREE.AmbientLight(0x404040, 1); // Soft ambient light

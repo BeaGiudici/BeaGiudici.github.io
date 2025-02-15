@@ -175,6 +175,8 @@ a.sidebar-nav-item:focus {
   }
 }
 
+/* general frame content */
+
 .iframe-container {
   position: relative;
   overflow: hidden;
@@ -194,11 +196,31 @@ a.sidebar-nav-item:focus {
     right: 0;
 }
 
+/* three.js content */
+
 .threejs-container {
   position: relative;
   overflow: hidden;
   width: 100%;
   padding-top: 100%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/* Ensure Three.js canvas is properly sized */
+#threejs-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .threejs-content {
@@ -211,6 +233,48 @@ a.sidebar-nav-item:focus {
     left: 0;
     bottom: 0;
     right: 0;
+}
+
+/* buttons */
+
+.shock-button {
+  margin: 5px;
+  color: black;
+  width: 120px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 10%;
+  cursor: pointer;
+  font-family: "PT Sans";
+  font-size: 20px;
+}
+
+/* container for legend */
+#legend {
+  position: absolute;
+  top: 10px; /* Distance from the top */
+  left: 20px;  /* Distance from the left */
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Container for buttons */
+#container {
+  position: absolute;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px;  /* Distance from the right */
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.background-button {
+  margin: 5px;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
 /*
