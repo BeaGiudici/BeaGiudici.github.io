@@ -289,6 +289,27 @@ a.sidebar-nav-item:focus {
   cursor: pointer;
 }
 
+/* Time Slider */
+
+.slider-container {
+  position: relative;
+  width: 300px;
+}
+
+#slider-labels {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px;
+}
+
+#slider-labels span {
+  font-size: 12px;
+  color: white;
+}
+
+
 /*
  * Header image
  *

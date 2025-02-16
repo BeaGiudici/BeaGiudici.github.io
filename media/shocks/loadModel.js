@@ -3,6 +3,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     const meshes = {};
     let currentModel = null;  // Store currently loaded model
     let meshVisibility = {};  // Store mesh visibility states across model changes
+    let currentLoadRequest = null;
     const scene = container.scene
 
     const slider = container.querySelector("#timeSlider");
@@ -31,14 +32,32 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
         // Remove old model
         if (currentModel) {
-            scene.remove(currentModel);
             currentModel.traverse((node) => {
                 if (node.isMesh) {
-                    node.geometry.dispose();
-                    node.material.dispose();
+                    node.geometry.dispose();  // Free memory from GPU
+                    if (node.material) {
+                        if (Array.isArray(node.material)) {
+                            node.material.forEach(mat => mat.dispose());
+                        } else {
+                            node.material.dispose();
+                        }
+                    }
                 }
             });
+            console.log('removed ')
+            scene.remove(currentModel);  // Remove from scene
+            currentModel = null;  // Reset the reference
         }
+
+        // Cancel Previous Load Requests
+        if (currentLoadRequest) {
+            currentLoadRequest.abort();  // 🔹 Cancel previous GLTF load
+            console.log("Previous load request aborted.");
+        }
+
+        // Start a New Load Request
+        const controller = new AbortController();
+        currentLoadRequest = controller;
 
         // Load new model
         loader.load(modelFilename, function (gltf) {
@@ -54,7 +73,18 @@ document.querySelectorAll(".threejs-container").forEach(container => {
             };
 
             // Scale and position adjustments
-            currentModel.scale.set(1.9e-13, 1.9e-13, 1.9e-13);
+            if (index < 2){
+                currentModel.scale.set(1.9e-13, 1.9e-13, 1.9e-13);
+            }
+            else if (index < 3) {
+                currentModel.scale.set(1.9e-14, 1.9e-14, 1.9e-14);
+            }
+            else if (index < 4) {
+                currentModel.scale.set(1.9e-15, 1.9e-15, 1.9e-15);
+            }
+            else {
+                currentModel.scale.set(7e-16, 7e-16, 7e-16);
+            }
             currentModel.position.set(0, 0, 0);
 
             // Handle mesh properties
@@ -80,8 +110,12 @@ document.querySelectorAll(".threejs-container").forEach(container => {
             // Update button status to reflect the previous one
             updateButtonStyles();
         }, undefined, function (error) {
-            console.error("Error loading model:", error);
-        });
+            if (controller.signal.aborted) {
+                console.log("Load request aborted before completion.");
+            } else {
+                console.error("Error loading model:", error);
+            }
+        }); 
     }
 
     // Load the first model initially
