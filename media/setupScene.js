@@ -22,16 +22,25 @@ document.querySelectorAll(".threejs-container").forEach(container => {
   // Get the button elements by ID
   const blackBtn = container.querySelector('#blackb');
   const whiteBtn = container.querySelector('#whiteb');
+  const labelContainer = container.querySelector('#slider-labels')
 
   // Set the background color of the scene
   if (blackBtn && whiteBtn) {
     console.log('getting buttons');
     blackBtn.addEventListener('click', () => {
         scene.background = new THREE.Color(0x333333);
+        const labels = labelContainer.querySelectorAll("span");
+        labels.forEach(label => {
+          label.style.color = 0xf1f1f1
+        });
     });
 
     whiteBtn.addEventListener('click', () => {
         scene.background = new THREE.Color(0xf1f1f1);
+        const labels = labelContainer.querySelectorAll("span");
+        labels.forEach(label => {
+          label.style.color = 0x333333
+        });
     });
   }
 

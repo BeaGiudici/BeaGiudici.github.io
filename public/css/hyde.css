@@ -292,21 +292,70 @@ a.sidebar-nav-item:focus {
 /* Time Slider */
 
 .slider-container {
-  position: relative;
-  width: 300px;
+  position: absolute; 
+  bottom: 10%; 
+  left: 10%; 
 }
+
+/* Increase the width and height of the slider */
+#timeSlider {
+  width: 100%;  /* Makes it full width of its container */
+  height: 10px; /* Increases thickness */
+  appearance: none; /* Removes default styles */
+  background: #ccc; /* Track color */
+  border-radius: 5px;
+  outline: none;
+  width: 400px;
+  transition: background 0.3s;
+}
+
+/* Style the draggable thumb (handle) */
+#timeSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px; /* Make it bigger */
+  height: 20px;
+  background: #007bff; /* Blue handle */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#timeSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Change thumb color when hovering */
+#timeSlider::-webkit-slider-thumb:hover {
+  background: #0056b3;
+}
+
+#timeSlider::-moz-range-thumb:hover {
+  background: #0056b3;
+}
+
 
 #slider-labels {
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 5px;
+  margin-top: 1px;
+  top: -10px; 
+  pointer-events: none; /* Prevents labels from interfering with slider clicks */
+  white-space: nowrap; /* ✅ Prevents labels from wrapping */
 }
 
 #slider-labels span {
-  font-size: 12px;
-  color: white;
+  font-size: 20px;
+  color: 0x333333;
+}
+
+#slider-labels span:last-child {
+  transform: translateX(-100%); /* ✅ Moves last label slightly left */
 }
 
 

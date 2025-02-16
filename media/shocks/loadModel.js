@@ -7,11 +7,44 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     const scene = container.scene
 
     const slider = container.querySelector("#timeSlider");
+    const labelContainer = container.querySelector("#slider-labels");
     slider.max = window.timeSteps.length - 1;
+
+    const modelKey = container.dataset.modelKey;
 
     // Show loading text initially
     const loadingText = container.querySelector('#loading-text');
     loadingText.style.display = 'block';  // Ensure the text is visible before loading starts
+
+    // Load time labels from JSON based on model
+    fetch("media/shocks/times.json")
+        .then(response => response.json())
+        .then(data => {
+            if (!data[modelKey] || !data[modelKey].times) {
+                console.error(`No time steps found for model: ${modelKey}`);
+                return;
+            }
+
+            const timeLabels = data[modelKey].times;  // Extract correct time labels
+            slider.min = 0
+            slider.value = 0
+            slider.max = timeLabels.length - 1;  // Update slider range
+
+            // Clear previous labels
+            labelContainer.innerHTML = ""; 
+
+            // Create labels below the slider
+            timeLabels.forEach((label, index) => {
+                const labelElement = document.createElement("span");
+                labelElement.textContent = (label/86400).toFixed(1) + " d";  // Add unit (seconds)
+                labelElement.style.position = "absolute";
+                labelElement.style.left = `${(index / (timeLabels.length - 1)) * 100}%`;
+                labelElement.style.transform = "translateX(-50%)";
+                labelContainer.appendChild(labelElement);
+            });
+
+        })
+        .catch(error => console.error("Error loading JSON:", error));
 
     // Function to load model
     function loadModel(index) {
