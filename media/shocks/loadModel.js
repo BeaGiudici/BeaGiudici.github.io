@@ -1,5 +1,10 @@
 document.querySelectorAll(".threejs-container").forEach(container => {
     const loader = new THREE.GLTFLoader();
+    const timeSteps = JSON.parse(container.dataset.timesteps); // Read time steps from data attribute
+    if (!timeSteps || timeSteps.length === 0) {
+        console.error(`No timeSteps found for model ${modelKey}`);
+        return;
+    }
     const meshes = {};
     let currentModel = null;  // Store currently loaded model
     let meshVisibility = {};  // Store mesh visibility states across model changes
@@ -7,8 +12,12 @@ document.querySelectorAll(".threejs-container").forEach(container => {
     const scene = container.scene
 
     const slider = container.querySelector("#timeSlider");
+    if (!scene || !slider) {
+        console.error(`Missing scene or slider for model ${modelKey}`);
+        return;
+    }
     const labelContainer = container.querySelector("#slider-labels");
-    slider.max = window.timeSteps.length - 1;
+    slider.max = timeSteps.length - 1;
 
     const modelKey = container.dataset.modelKey;
 
@@ -48,12 +57,12 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
     // Function to load model
     function loadModel(index) {
-        if (!window.timeSteps || index >= window.timeSteps.length) {
+        if (index >= timeSteps.length) {
             console.error("Invalid timeSteps array or index out of range.");
             return;
         }
 
-        const modelFilename = window.timeSteps[index];
+        const modelFilename = timeSteps[index];
 
         if (currentModel) {
             currentModel.traverse((node) => {

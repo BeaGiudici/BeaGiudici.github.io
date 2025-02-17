@@ -23,7 +23,8 @@ title: Nickel Ejecta
 <h2>Model WH12.5</h2>
 
 <!-- Define the container -->
-<div class="threejs-container" data-model-key="W12_5">
+<div class="threejs-container" data-model-key="W12_5", 
+data-timesteps='["media/shocks/w12_5_03.gltf", "media/shocks/w12_5_04.gltf", "media/shocks/w12_5_05.gltf", "media/shocks/w12_5_06.gltf", "media/shocks/w12_5_07.gltf"]'>
   <div id="threejs-canvas"></div>
   
   <!-- Time Step Slider -->
@@ -44,22 +45,7 @@ title: Nickel Ejecta
 
   <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
     <h2>Loading...</h2>
-  </div>
-
-  <script>
-    // Define the model file paths here
-    const timeSteps = [
-        "media/shocks/w12_5_03.gltf",
-        "media/shocks/w12_5_04.gltf",
-        "media/shocks/w12_5_05.gltf",
-        "media/shocks/w12_5_06.gltf",
-        "media/shocks/w12_5_07.gltf"
-    ];
-  
-    // Ensure `timeSteps` is available globally
-    window.timeSteps = timeSteps;
-  </script>
-  
+  </div> 
 
   <!-- Load JavaScript Files -->
   <script src="media/setupScene.js"></script>
@@ -70,7 +56,8 @@ title: Nickel Ejecta
 <h2>Model SW13.1</h2>
 
 <!-- Define the container -->
-<div class="threejs-container" data-model-key="W12_5">
+<div class="threejs-container" data-model-key="HS13_1"
+data-timesteps='["media/shocks/hs13_1_03.gltf"]'>
   <div id="threejs-canvas"></div>
   
   <!-- Time Step Slider -->
@@ -92,21 +79,6 @@ title: Nickel Ejecta
   <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
     <h2>Loading...</h2>
   </div>
-
-  <script>
-    // Define the model file paths here
-    const timeSteps = [
-        "media/shocks/hs13_1_03.gltf",
-        //"media/shocks/hs13_1_04.gltf",
-        //"media/shocks/hs13_1_05.gltf",
-        //"media/shocks/hs13_1_06.gltf",
-        //"media/shocks/hs13_1_07.gltf"
-    ];
-  
-    // Ensure `timeSteps` is available globally
-    window.timeSteps = timeSteps;
-  </script>
-  
 
   <!-- Load JavaScript Files -->
   <script src="media/setupScene.js"></script>
