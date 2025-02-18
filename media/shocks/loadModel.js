@@ -120,7 +120,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
             // Scale and position adjustments
             if (index < 3) {
-                currentModel.scale.set(1.e-11, 1.e-11, 1.e-11);
+                currentModel.scale.set(1.e-10, 1.e-10, 1.e-10);
             }
             else if (index < 5) {
                 currentModel.scale.set(1.e-13, 1.e-13, 1.e-13);
