@@ -123,7 +123,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
                 currentModel.scale.set(2e-9, 2e-9, 2e-9);
             }
             else if (index < 3) {
-                currentModel.scale.set(2.e-11, 2.e-11, 2.e-11);
+                currentModel.scale.set(2.e-10, 2.e-10, 2.e-10);
             }
             else if (index < 5) {
                 currentModel.scale.set(2.e-13, 2.e-13, 2.e-13);
@@ -132,7 +132,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
                 currentModel.scale.set(1.e-14, 1.e-14, 1.e-14);
             }
             else if (index < 7) {
-                currentModel.scale.set(5.e-14, 5e-14, 5e-14);
+                currentModel.scale.set(5.e-15, 5e-15, 5e-15);
             }
             else {
                 currentModel.scale.set(7e-16, 7e-16, 7e-16);
