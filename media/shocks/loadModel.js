@@ -45,7 +45,11 @@ document.querySelectorAll(".threejs-container").forEach(container => {
             // Create labels below the slider
             timeLabels.forEach((label, index) => {
                 const labelElement = document.createElement("span");
-                labelElement.textContent = (label/86400).toFixed(1) + " d";  // Add unit (seconds)
+                if (index < 86400/2) {
+                    labelElement.textContent = label.toFixed(1) + " s";  // Add unit (seconds)
+                } else {
+                    labelElement.textContent = (label/86400).toFixed(1) + " d";  // Add unit (days)
+                }
                 labelElement.style.position = "absolute";
                 labelElement.style.left = `${(index / (timeLabels.length - 1)) * 100}%`;
                 labelElement.style.transform = "translateX(-50%)";
