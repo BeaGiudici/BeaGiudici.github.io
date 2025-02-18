@@ -305,7 +305,7 @@ a.sidebar-nav-item:focus {
   background: #ccc; /* Track color */
   border-radius: 5px;
   outline: none;
-  width: 500px;
+  width: 600px;
   transition: background 0.3s;
 }
 
