@@ -45,7 +45,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
             // Create labels below the slider
             timeLabels.forEach((label, index) => {
                 const labelElement = document.createElement("span");
-                if (index < 86400/2) {
+                if (label < 8640) {
                     labelElement.textContent = label.toFixed(1) + " s";  // Add unit (seconds)
                 } else {
                     labelElement.textContent = (label/86400).toFixed(1) + " d";  // Add unit (days)
