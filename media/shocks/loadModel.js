@@ -119,7 +119,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
             };
 
             // Scale and position adjustments
-            if (index < 3) {
+            if (index < 2) {
                 currentModel.scale.set(2e-9, 2e-9, 2e-9);
             }
             else if (index < 3) {
