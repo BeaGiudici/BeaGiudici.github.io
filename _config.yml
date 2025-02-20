@@ -19,6 +19,8 @@ author:
 
 plugins: [jekyll-paginate]
 paginate:         5
+include:
+  - media/shocks
 
 # Custom vars
 version:          1.0.0
