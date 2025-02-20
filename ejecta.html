@@ -3,13 +3,6 @@ layout: list
 title: Nickel Ejecta
 ---
 
-<!-- Three.js Script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-
-<!-- OrbitControls.js Script -->
-<script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-
 <p>
   The following 3D representations protray the 56Ni ejecta (colour-coded with the velecity, more redder means higher velocity and bluer means lower velocity) with the forward (red surface) and reverse (yellow surface) shocks
 </p>
@@ -22,71 +15,8 @@ title: Nickel Ejecta
 
 <!-- Model WH12.5 -->
 
-<h2>Model WH12.5</h2>
-
-<!-- Define the container -->
-<div class="threejs-container" data-model-key="W12_5", 
-data-timesteps='["media/shocks/w12_5_00.gltf", "media/shocks/w12_5_01.gltf", "media/shocks/w12_5_02.gltf", "media/shocks/w12_5_03.gltf", "media/shocks/w12_5_04.gltf", "media/shocks/w12_5_05.gltf", "media/shocks/w12_5_06.gltf", "media/shocks/w12_5_07.gltf"]'>
-  <div id="threejs-canvas"></div>
-
-  <!-- Time Step Slider -->
-  <div class="slider-container">
-    <input type="range" id="timeSlider" min="0" max="2" value="0" step="1">
-    <div id="slider-labels"></div>
-</div>
-
-  <div id="legend">
-    <button class="shock-button" id="toggle_mesh1" style="background-color: red;">Forward shock</button>
-    <button class="shock-button" id="toggle_mesh2" style="background-color: yellow;">Reverse shock</button>
-  </div>
-
-  <div id="container">
-    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
-    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
-  </div>
-
-  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
-    <h2>Loading...</h2>
-  </div> 
-
-  <!-- Load JavaScript Files -->
-  <script src="media/setupScene.js"></script>
-  <script src="media/shocks/loadModel.js"></script>
-  
-</div>
+<p> <a href="media/shocks/w125.html">Model WH12.5</a> </p>
 
 <!-- Model SW13.1 -->
 
-<h2>Model SW13.1</h2>
-
-<!-- Define the container -->
-<div class="threejs-container" data-model-key="W12_5", 
-data-timesteps='["media/shocks/hs13_1_00.gltf", "media/shocks/hs13_1_01.gltf", "media/shocks/hs13_1_02.gltf", "media/shocks/hs13_1_03.gltf", "media/shocks/hs13_1_04.gltf", 
-"media/shocks/hs13_1_05.gltf", "media/shocks/hs13_1_06.gltf", "media/shocks/hs13_1_07.gltf"]'>
-  <div id="threejs-canvas"></div>
-
-  <!-- Time Step Slider -->
-  <div class="slider-container">
-    <input type="range" id="timeSlider" min="0" max="2" value="0" step="1">
-    <div id="slider-labels"></div>
-</div>
-
-  <div id="legend">
-    <button class="shock-button" id="toggle_mesh1" style="background-color: red;">Forward shock</button>
-    <button class="shock-button" id="toggle_mesh2" style="background-color: yellow;">Reverse shock</button>
-  </div>
-
-  <div id="container">
-    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
-    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
-  </div>
-
-  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
-    <h2>Loading...</h2>
-  </div> 
-
-  <!-- Load JavaScript Files -->
-  <script src="media/setupScene.js"></script>
-  <script src="media/shocks/loadModel.js"></script>
-  
-</div>
+<p> <a href="media/shocks/hs131.html">Model SW13.1</a> </p>

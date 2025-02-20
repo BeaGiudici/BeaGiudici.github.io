@@ -1,0 +1,43 @@
+---
+layout: default
+title: Model SW13.1
+---
+
+<!-- Three.js Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+<!-- OrbitControls.js Script -->
+<script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+<!-- Define the container -->
+<div class="threejs-container" data-model-key="W12_5", 
+data-timesteps='["media/shocks/hs13_1_00.gltf", "media/shocks/hs13_1_01.gltf", "media/shocks/hs13_1_02.gltf", "media/shocks/hs13_1_03.gltf", "media/shocks/hs13_1_04.gltf", 
+"media/shocks/hs13_1_05.gltf", "media/shocks/hs13_1_06.gltf", "media/shocks/hs13_1_07.gltf"]'>
+  <div id="threejs-canvas"></div>
+
+  <!-- Time Step Slider -->
+  <div class="slider-container">
+    <input type="range" id="timeSlider" min="0" max="2" value="0" step="1">
+    <div id="slider-labels"></div>
+</div>
+
+  <div id="legend">
+    <button class="shock-button" id="toggle_mesh1" style="background-color: red;">Forward shock</button>
+    <button class="shock-button" id="toggle_mesh2" style="background-color: yellow;">Reverse shock</button>
+  </div>
+
+  <div id="container">
+    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
+  </div>
+
+  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+    <h2>Loading...</h2>
+  </div> 
+
+  <!-- Load JavaScript Files -->
+  <script src="media/setupScene.js"></script>
+  <script src="media/shocks/loadModel.js"></script>
+  
+</div>
