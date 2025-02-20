@@ -3,7 +3,9 @@ markdown:         kramdown
 highlighter:      pygments
 
 # Permalinks
-#permalink:        pretty
+permalink:        /:path/:name.html
+#include:
+#  - media/shocks
 #relative_permalinks: true
 
 # Setup
@@ -19,11 +21,14 @@ author:
 
 plugins: [jekyll-paginate]
 paginate:         5
-include:
-  - media/shocks
 
 # Custom vars
 version:          1.0.0
 
 github:           
   repo:           https://github.com/BeaGiudici/
+
+collections:
+  media:
+    output: true
+    permalink: /media/:path/:name.html

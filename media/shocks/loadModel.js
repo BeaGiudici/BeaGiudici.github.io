@@ -141,19 +141,23 @@ document.querySelectorAll(".threejs-container").forEach(container => {
                 //console.log("Node:", node.name);
         if (node.isMesh && elementSettings[node.name]) {
             // Store the mesh for toggling later
-            meshes[node.name] = node;
+            if (elementSettings[node.name]) {
+                meshes[node.name] = node;
 
-            // Apply initial material settings
-            node.material.transparent = elementSettings[node.name].transparent;
-            node.material.opacity = elementSettings[node.name].opacity;
-            node.material.needsUpdate = true;
-            node.material.depthWrite = elementSettings[node.name].depthWrite; // Prevent depth writing for shocks
+                // Apply initial material settings
+                node.material.transparent = elementSettings[node.name].transparent;
+                node.material.opacity = elementSettings[node.name].opacity;
+                node.material.needsUpdate = true;
+                node.material.depthWrite = elementSettings[node.name].depthWrite; // Prevent depth writing for shocks
 
-            // Use alphaMap if applicable
-            if (node.material.map) {
-            node.material.alphaMap = node.material.map;
+                // Use alphaMap if applicable
+                if (node.material.map) {
+                node.material.alphaMap = node.material.map;
+                }
+                node.visible = meshVisibility[node.name] !== undefined ? meshVisibility[node.name] : true;
+            } else {
+                console.warn(`Mesh ${node.name} not found in elementSettings`);
             }
-            node.visible = meshVisibility[node.name] !== undefined ? meshVisibility[node.name] : true;
         }
             });
             // Update button status to reflect the previous one
@@ -192,6 +196,8 @@ document.querySelectorAll(".threejs-container").forEach(container => {
                 meshVisibility[meshName] = mesh.visible; // Save state
                 updateButtonStyles();
                 console.log(`${meshName} visibility: ${mesh.visible}`);
+            } else {
+                console.warn(`Toggle button clicked, but mesh ${meshName} does not exist.`);
             }
             });
         }
