@@ -18,10 +18,10 @@ document.querySelectorAll(".threejs-container").forEach(container => {
       const model = gltf.scene; // The loaded GLTF scene
       scene.add(model); // Add the model to the scene
       const elementSettings = {
-        mesh0: {opacity: 0.8}, 
-        mesh1: {opacity: 0.8}, 
-        mesh2: {opacity: 0.8}, 
-        mesh3: {opacity: 0.8}, 
+        mesh0: {opacity: 0.5}, 
+        mesh1: {opacity: 0.5}, 
+        mesh2: {opacity: 0.5}, 
+        mesh3: {opacity: 0.5}, 
         //mesh4: {opacity: 0.8},
       };
 
@@ -35,7 +35,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
           node.material.transparent = true;
           node.material.opacity = elementSettings[node.name].opacity;
           node.material.needsUpdate = true;
-          //node.material.depthWrite = false; // Prevent depth writing
+          node.material.depthWrite = false; // Prevent depth writing
 
           // Use alphaMap if applicable
           if (node.material.map) {
