@@ -1,0 +1,48 @@
+---
+layout: default
+title: High mass - High energy models
+---
+
+<!-- Three.js Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+<!-- OrbitControls.js Script -->
+<script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+<h2> Mock emission 3D rendering </h2>
+
+<!-- MODEL HS19.8 -->
+
+<h3>Model SW20.8</h3>
+<script>
+  // Ensure `timeSteps` is available globally
+  window.modelFile =  'media/mock_emission/hs208.gltf';
+</script>
+
+<!-- Define the container -->
+<div class="threejs-container">
+  <div id="threejs-canvas", tag="hs131"></div>
+  
+  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
+    <button class="element-button" id="toggle_mesh0" style="background-color: cyan;">10%</button>
+    <button class="element-button" id="toggle_mesh1" style="background-color: magenta;">15%</button>    
+    <button class="element-button" id="toggle_mesh2" style="background-color: red;">30%</button>
+    <button class="element-button" id="toggle_mesh3" style="background-color: blue;">50%</button>
+  </div>
+  
+  <div id="container">
+    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
+    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
+  </div>
+  
+  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
+    <h2>Loading...</h2>
+  </div>  
+
+  <!-- Load JavaScript Files -->
+  <script src="media/setupScene.js"></script>
+  <script src="media/mock_emission/loadModel.js"></script>
+  
+</div>
+
