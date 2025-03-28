@@ -5,11 +5,35 @@ document.querySelectorAll(".threejs-container").forEach(container => {
   // Set up basic Three.js Scene
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 100);
+  // Adjust camera position
+  camera.position.set(-21,-21,-21)
   const renderer = new THREE.WebGLRenderer({ antialias: true });
 
   // Ensure renderer is inside the canvas
   renderer.setSize(canvas.clientWidth, canvas.clientHeight);
   canvas.appendChild(renderer.domElement);
+
+  // Initialize OrbitControls (allows for dragging, rotating, and zooming)
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableRotate = true;
+  controls.enableZoom = true;
+  controls.enablePan = true;
+
+  // Allow full 360-degree rotation
+  controls.minPolarAngle = -Infinity;  
+  controls.maxPolarAngle = Infinity;  
+  controls.minAzimuthAngle = -Infinity;
+  controls.maxAzimuthAngle = Infinity;
+  controls.enableDamping = true; // Smooth movement
+  controls.dampingFactor = 0.05;
+
+  // Ensure controls update on animation loop
+  function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+  }
+  animate();
 
   // Scene background color
   scene.background = new THREE.Color(0xf1f1f1); // Set background to creme
@@ -63,31 +87,6 @@ document.querySelectorAll(".threejs-container").forEach(container => {
   // add a hemisphere light (simulates sky-ground lighting)
   //const hemiLight = new THREE.HemisphereLight(0xffffff, 0x404040, 1.5);
   //scene.add(hemiLight);
-
-  // Adjust camera position
-  camera.position.set(-21,-21,-21)
-
-  // Initialize OrbitControls (allows for dragging, rotating, and zooming)
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableRotate = true;
-  controls.enableZoom = true;
-  controls.enablePan = true;
-
-  // Allow full 360-degree rotation
-  controls.minPolarAngle = -Infinity;  
-  controls.maxPolarAngle = Infinity;  
-  controls.minAzimuthAngle = -Infinity;
-  controls.maxAzimuthAngle = Infinity;
-  controls.enableDamping = true; // Smooth movement
-  controls.dampingFactor = 0.05;
-
-  // Ensure controls update on animation loop
-  function animate() {
-      requestAnimationFrame(animate);
-      controls.update();
-      renderer.render(scene, camera);
-  }
-  animate();
 
   // Handle window resizing (maintain rendering size on resize)
   window.addEventListener('resize', () => {
