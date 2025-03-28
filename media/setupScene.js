@@ -74,8 +74,8 @@ document.querySelectorAll(".threejs-container").forEach(container => {
   controls.enablePan = true;
 
   // Allow full 360-degree rotation
-  controls.minPolarAngle = 0;  
-  controls.maxPolarAngle = Math.PI;  
+  controls.minPolarAngle = -Infinity;  
+  controls.maxPolarAngle = Infinity;  
   controls.minAzimuthAngle = -Infinity;
   controls.maxAzimuthAngle = Infinity;
   controls.enableDamping = true; // Smooth movement
