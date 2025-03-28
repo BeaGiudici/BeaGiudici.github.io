@@ -69,19 +69,24 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
   // Initialize OrbitControls (allows for dragging, rotating, and zooming)
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true; // Enable smoother controls
-  controls.dampingFactor = 0.25;
-  controls.screenSpacePanning = false; // Set this to 'false' if you want to disable panning
-  controls.minPolarAngle = 0; // Limit vertical rotation
-  controls.maxPolarAngle = 2.0 * Math.PI; // Limit vertical rotation
+  controls.enableRotate = true;
+  controls.enableZoom = true;
+  controls.enablePan = true;
 
-  // Create an animation loop to render the scene and update it every frame
+  // Allow full 360-degree rotation
+  controls.minPolarAngle = 0;  
+  controls.maxPolarAngle = Math.PI;  
+  controls.minAzimuthAngle = -Infinity;
+  controls.maxAzimuthAngle = Infinity;
+  controls.enableDamping = true; // Smooth movement
+  controls.dampingFactor = 0.05;
+
+  // Ensure controls update on animation loop
   function animate() {
       requestAnimationFrame(animate);
-      controls.update(); 
-    renderer.render(scene, camera);
+      controls.update();
+      renderer.render(scene, camera);
   }
-
   animate();
 
   // Handle window resizing (maintain rendering size on resize)
