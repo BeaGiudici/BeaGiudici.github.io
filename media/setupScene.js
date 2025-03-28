@@ -14,23 +14,23 @@ document.querySelectorAll(".threejs-container").forEach(container => {
   canvas.appendChild(renderer.domElement);
 
   // Initialize OrbitControls (allows for dragging, rotating, and zooming)
-  //const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  //controls.enableRotate = true;
-  //controls.enableZoom = true;
-  //controls.enablePan = true;
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableRotate = true;
+  controls.enableZoom = true;
+  controls.enablePan = true;
 
   // Allow full 360-degree rotation
-  //controls.minPolarAngle = -Infinity;  
-  //controls.maxPolarAngle = Infinity;  
-  //controls.minAzimuthAngle = -Infinity;
-  //controls.maxAzimuthAngle = Infinity;
-  //controls.enableDamping = true; // Smooth movement
-  //controls.dampingFactor = 0.05;
+  controls.minPolarAngle = -Infinity;  
+  controls.maxPolarAngle = Infinity;  
+  controls.minAzimuthAngle = -Infinity;
+  controls.maxAzimuthAngle = Infinity;
+  controls.enableDamping = true; // Smooth movement
+  controls.dampingFactor = 0.05;
 
-  const controls = new THREE.TrackballControls(camera, renderer.domElement);
-  controls.noRotate = false;  // Enable rotation
-  controls.noZoom = false;    // Enable zooming
-  controls.noPan = false;     // Enable panning
+  //const controls = new THREE.TrackballControls(camera, renderer.domElement);
+  //controls.noRotate = false;  // Enable rotation
+  //controls.noZoom = false;    // Enable zooming
+  //controls.noPan = false;     // Enable panning
 
   controls.dynamicDampingFactor = 0.2;  // Smooth rotation
 
@@ -49,6 +49,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
   container.scene = scene;
   container.camera = camera;
   container.renderer = renderer;
+  container.controls = controls;
 
   // Get the button elements by ID
   const blackBtn = container.querySelector('#blackb');
