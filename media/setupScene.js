@@ -32,7 +32,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
   //controls.noZoom = false;    // Enable zooming
   //controls.noPan = false;     // Enable panning
 
-  controls.dynamicDampingFactor = 0.2;  // Smooth rotation
+  //controls.dynamicDampingFactor = 0.2;  // Smooth rotation
 
   // Ensure controls update on animation loop
   function animate() {
