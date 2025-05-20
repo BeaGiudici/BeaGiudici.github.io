@@ -78,6 +78,8 @@ Private lessons of physics and mathematics to high school and bachelor's student
 
 1. F. Cipolletta, J.V. Kalinani, E. Giangrandi, B. Giacomazzo, R. Ciolfi, L. Sala, **B. Giudici**, *Spritz: general relativistic magnetohydrodynamics with neutrinos*, Classical and Quantum Gravity, vol. 38, no. 8, p. 085021, Mar. 2021, **DOI** [10.1088/1361-6382/abebb7](https://iopscience.iop.org/article/10.1088/1361-6382/abebb7){:target="_blank"}.
 
+2. S. Orlando, M. Miceli, M. Ono, S. Nagataki, M.-A. Aloy, F. Bocchino, M. Gabler, **B. Giudici**, R. Giuffrida, E. Greco, G. La Malfa, S.-H. Lee, M. Obergaulinger, O. Petruk, V. Sapienza, S. Ustamujic, J. Weng, *Tracing the ejecta structure of SN 1987A: Insights and diagnostics from 3D MHD simulations*, **arXiv** [2504.19896](https://arxiv.org/abs/2504.19896v1){:target="_blank"}.
+
 ---
 
 ## Conferences and Workshops
