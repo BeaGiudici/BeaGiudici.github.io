@@ -15,7 +15,11 @@ title: Curriculum Vitae
 
 ## Education
 
-### 2021 - Present
+### Present
+
+#### PostDoc in Astronomy and Astrophysics at Universitat de València
+
+### 2021 - 2025
 
 #### PhD in Astronomy and Astrophysics at Universitat de València
 
