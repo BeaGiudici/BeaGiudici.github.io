@@ -17,7 +17,7 @@ title: Curriculum Vitae
 
 ### Present
 
-#### PostDoc in Astronomy and Astrophysics at Universitat de València
+#### Postdoctoral researcher (Técnica superior de soporte a la investigación) at Universitat de València
 
 ### 2021 - 2025
 
