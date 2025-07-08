@@ -8,7 +8,6 @@ document.querySelectorAll(".threejs-container").forEach(container => {
   const loadingText = container.querySelector('#loading-text');
   loadingText.style.display = 'block';  // Ensure the text is visible before loading starts
 
-
   // Function to load model
   function loadModel(modelFilename) {
 
@@ -22,7 +21,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
         mesh1: {opacity: 0.8}, 
         mesh2: {opacity: 0.8}, 
         mesh3: {opacity: 0.8}, 
-        mesh4: {opacity: 0.8},
+        //mesh4: {opacity: 0.8},
       };
 
       model.traverse((node) => {
@@ -32,9 +31,10 @@ document.querySelectorAll(".threejs-container").forEach(container => {
           meshes[node.name] = node;
 
           // Apply initial material settings
-          node.material.transparent = true;
+          node.material.transparent = false;
           node.material.opacity = elementSettings[node.name].opacity;
           node.material.needsUpdate = true;
+          node.material.side = THREE.DoubleSide; // o DoubleSide se vuoi
           //node.material.depthWrite = false; // Prevent depth writing
 
           // Use alphaMap if applicable
@@ -63,7 +63,7 @@ document.querySelectorAll(".threejs-container").forEach(container => {
 
   // Add interactive legend
   // Add event listeners for toggle buttons
-  for (let i = 0; i <= 4; i++) { // Loop from 0 to 4 for mesh0 to mesh4
+  for (let i = 0; i <= 3; i++) { // Loop from 0 to 4 for mesh0 to mesh3
     const meshName = `mesh${i}`;
     const toggleButton = container.querySelector(`#toggle_${meshName}`); // Fetch button by ID
 
