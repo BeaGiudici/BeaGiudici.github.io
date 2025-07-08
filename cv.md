@@ -23,6 +23,7 @@ title: Curriculum Vitae
 
 #### PhD in Astronomy and Astrophysics at Universitat de València
 
+Grade: Sobresaliente mención Cum Laude y mención Internacional
 Project: "3D-LoSS 3 dimensional, long-time supernova simulations (CIDEGENT/2019/031)"  
 Supervisor: Dr. Michael Gabler  
 Tutor: Prof. Miguel Ángel Aloy Torás
