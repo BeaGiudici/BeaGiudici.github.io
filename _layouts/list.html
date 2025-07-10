@@ -3,6 +3,7 @@ layout: default
 ---
 
 <div class="list">
-  <h1 class="list-title">{{ page.title }}</h1>
-  {{ content }}
+    <button class="back-button" onclick="history.back()">← Back</button>
+    <h1 class="list-title">{{ page.title }}</h1>
+    {{ content }}
 </div>
