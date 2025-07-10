@@ -13,7 +13,6 @@
  * https://github.com/poole/hyde.
  */
 
-
 /*
  * Contents
  *
@@ -24,7 +23,6 @@
  * Themes
  */
 
-
 /*
  * Global resets
  *
@@ -32,19 +30,18 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 @media (min-width: 58em) {
-  html {
-    font-size: 20px;
-  }
+    html {
+        font-size: 20px;
+    }
 }
-
 
 /*
  * Sidebar
@@ -54,53 +51,53 @@ html {
  */
 
 .sidebar {
-  text-align: center;
-  padding: 2rem 1rem;
-  padding-bottom: 0;
-  color: rgba(255,255,255,.5);
-  background-color: #202020;
+    text-align: center;
+    padding: 2rem 1rem;
+    padding-bottom: 0;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #202020;
 }
 @media (min-width: 48em) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 18rem;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Full height */
-  }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 18rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Full height */
+    }
 }
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+    color: #fff;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
-  margin-top: 0;
-  font-family: "Abril Fatface", serif;
-  font-size: 3.25rem;
+    color: #fff;
+    margin-top: 0;
+    font-family: "Abril Fatface", serif;
+    font-size: 3.25rem;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 .sidebar-nav-item {
-  display: block;
-  line-height: 1.75;
+    display: block;
+    line-height: 1.75;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 .sidebar-nav-item.active {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 /* Sticky sidebar
@@ -110,48 +107,64 @@ a.sidebar-nav-item:focus {
  */
 
 @media (min-width: 48em) {
-  .sidebar-sticky {
-    position: absolute;
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
-  }
+    .sidebar-sticky {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+    }
 }
 
 /* Hide the list initially */
 .interactive-list {
-  display: none;
-  list-style: circle;
-  margin-top: 10px;
+    display: none;
+    list-style: circle;
+    margin-top: 10px;
 }
 .interactive-list.active {
-  font-weight: bold;
-  display: block;
+    font-weight: bold;
+    display: block;
 }
 
 /* Show the list when the checkbox is checked */
 .toggle-checkbox:checked + .interactive-title + .interactive-list,
 .interactive-list a.active {
-  display: block;
+    display: block;
 }
 
 /* Hide the checkbox itself */
 .toggle-checkbox {
-  display: none;
+    display: none;
 }
 
 /* Add styles for the clickable title */
 .interactive-title {
-  cursor: pointer;
-  color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 5px;
-  display: block;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
 }
 .interactive-title:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
 
 /* Container
  *
@@ -160,32 +173,32 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
-  padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 @media (min-width: 48em) {
-  .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
-  }
+    .content {
+        max-width: 38rem;
+        margin-left: 20rem;
+        margin-right: 2rem;
+    }
 }
 
 @media (min-width: 64em) {
-  .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
-  }
+    .content {
+        margin-left: 22rem;
+        margin-right: 4rem;
+    }
 }
 
 /* general frame content */
 
 .iframe-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 .iframe-content {
@@ -203,28 +216,28 @@ a.sidebar-nav-item:focus {
 /* three.js content */
 
 .threejs-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 100%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  border-radius: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 /* Ensure Three.js canvas is properly sized */
 #threejs-canvas {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .threejs-content {
@@ -242,139 +255,136 @@ a.sidebar-nav-item:focus {
 /* buttons */
 
 .shock-button {
-  margin: 5px;
-  color: black;
-  width: 120px;
-  height: 60px;
-  border: 1px solid black;
-  border-radius: 10%;
-  cursor: pointer;
-  font-family: "PT Sans";
-  font-size: 20px;
+    margin: 5px;
+    color: black;
+    width: 120px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 10%;
+    cursor: pointer;
+    font-family: "PT Sans";
+    font-size: 20px;
 }
 
 .element-button {
-  margin: 5px;
-  color: black;
-  width: 60px;
-  height: 60px;
-  border: 1px solid black;
-  border-radius: 50%;
-  cursor: pointer;
-  font-family: "PT Sans";
-  font-size: 20px;
+    margin: 5px;
+    color: black;
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: "PT Sans";
+    font-size: 20px;
 }
 
 /* container for legend */
 #legend {
-  position: absolute;
-  top: 10px; /* Distance from the top */
-  left: 20px;  /* Distance from the left */
-  display: flex;
-  gap: 10px; /* Space between buttons */
+    position: absolute;
+    top: 10px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    display: flex;
+    gap: 10px; /* Space between buttons */
 }
 
 /* Container for buttons */
 #container {
-  position: absolute;
-  bottom: 20px; /* Distance from the bottom */
-  right: 20px;  /* Distance from the right */
-  display: flex;
-  gap: 10px; /* Space between buttons */
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    display: flex;
+    gap: 10px; /* Space between buttons */
 }
 
 .background-button {
-  margin: 5px;
-  color: black;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  padding: 10px 15px;
-  cursor: pointer;
+    margin: 5px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
 /* Time Slider */
 
 .slider-container {
-  position: absolute; 
-  bottom: 10%; 
-  left: 10%; 
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
 }
 
 /* Increase the width and height of the slider */
 #timeSlider {
-  width: 100%;  /* Makes it full width of its container */
-  height: 10px; /* Increases thickness */
-  appearance: none; /* Removes default styles */
-  background: #ccc; /* Track color */
-  border-radius: 5px;
-  outline: none;
-  width: 600px;
-  transition: background 0.3s;
+    width: 100%; /* Makes it full width of its container */
+    height: 10px; /* Increases thickness */
+    appearance: none; /* Removes default styles */
+    background: #ccc; /* Track color */
+    border-radius: 5px;
+    outline: none;
+    width: 600px;
+    transition: background 0.3s;
 }
 
 /* Style the draggable thumb (handle) */
 #timeSlider::-webkit-slider-thumb {
-  appearance: none;
-  width: 20px; /* Make it bigger */
-  height: 20px;
-  background: #007bff; /* Blue handle */
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
+    appearance: none;
+    width: 20px; /* Make it bigger */
+    height: 20px;
+    background: #007bff; /* Blue handle */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 #timeSlider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: #007bff;
-  border-radius: 50%;
-  cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* Change thumb color when hovering */
 #timeSlider::-webkit-slider-thumb:hover {
-  background: #0056b3;
+    background: #0056b3;
 }
 
 #timeSlider::-moz-range-thumb:hover {
-  background: #0056b3;
+    background: #0056b3;
 }
 
-
 #slider-labels {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 1px;
-  top: -10px; 
-  pointer-events: none; /* Prevents labels from interfering with slider clicks */
-  white-space: nowrap; /* ✅ Prevents labels from wrapping */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1px;
+    top: -10px;
+    pointer-events: none; /* Prevents labels from interfering with slider clicks */
+    white-space: nowrap; /* ✅ Prevents labels from wrapping */
 }
 
 #slider-labels span {
-  font-size: 20px;
-  color: 0x333333;
+    font-size: 20px;
+    color: 0x333333;
 }
 
 #slider-labels span:last-child {
-  transform: translateX(-100%); /* ✅ Moves last label slightly left */
+    transform: translateX(-100%); /* ✅ Moves last label slightly left */
 }
-
 
 /*
  * Header image
  *
  */
 
-.header { 
-  background-image: url('volume_hs18_2.png'); 
-  background-size: cover; /* Adjust as needed */ 
-  height: 200px; /* Set a height for your header */ 
-  /* Other styling properties */ 
-} 
-
+.header {
+    background-image: url("volume_hs18_2.png");
+    background-size: cover; /* Adjust as needed */
+    height: 200px; /* Set a height for your header */
+    /* Other styling properties */
+}
 
 /*
  * Reverse layout
@@ -383,24 +393,22 @@ a.sidebar-nav-item:focus {
  */
 
 @media (min-width: 48em) {
-  .layout-reverse .sidebar {
-    left: auto;
-    right: 0;
-  }
-  .layout-reverse .content {
-    margin-left: 2rem;
-    margin-right: 20rem;
-  }
+    .layout-reverse .sidebar {
+        left: auto;
+        right: 0;
+    }
+    .layout-reverse .content {
+        margin-left: 2rem;
+        margin-right: 20rem;
+    }
 }
 
 @media (min-width: 64em) {
-  .layout-reverse .content {
-    margin-left: 4rem;
-    margin-right: 22rem;
-  }
+    .layout-reverse .content {
+        margin-left: 4rem;
+        margin-right: 22rem;
+    }
 }
-
-
 
 /*
  * Themes
@@ -413,112 +421,112 @@ a.sidebar-nav-item:focus {
 
 /* Red */
 .theme-base-08 .sidebar {
-  background-color: #ac4142;
+    background-color: #ac4142;
 }
 .theme-base-08 .content a,
 .theme-base-08 .related-posts li a:hover {
-  color: #ac4142;
+    color: #ac4142;
 }
 
 /* Orange */
 .theme-base-09 .sidebar {
-  background-color: #d28445;
+    background-color: #d28445;
 }
 .theme-base-09 .content a,
 .theme-base-09 .related-posts li a:hover {
-  color: #d28445;
+    color: #d28445;
 }
 
 /* Yellow */
 .theme-base-0a .sidebar {
-  background-color: #f4bf75;
+    background-color: #f4bf75;
 }
 .theme-base-0a .content a,
 .theme-base-0a .related-posts li a:hover {
-  color: #f4bf75;
+    color: #f4bf75;
 }
 
 /* Green */
 .theme-base-0b .sidebar {
-  background-color: #90a959;
+    background-color: #90a959;
 }
 .theme-base-0b .content a,
 .theme-base-0b .related-posts li a:hover {
-  color: #90a959;
+    color: #90a959;
 }
 
 /* Cyan */
 .theme-base-0c .sidebar {
-  background-color: #75b5aa;
+    background-color: #75b5aa;
 }
 .theme-base-0c .content a,
 .theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
+    color: #75b5aa;
 }
 
 /* Blue */
 .theme-base-0d .sidebar {
-  background-color: #6a9fb5;
+    background-color: #6a9fb5;
 }
 .theme-base-0d .content a,
 .theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
+    color: #6a9fb5;
 }
 
 /* Magenta */
 .theme-base-0e .sidebar {
-  background-color: #aa759f;
+    background-color: #aa759f;
 }
 .theme-base-0e .content a,
 .theme-base-0e .related-posts li a:hover {
-  color: #aa759f;
+    color: #aa759f;
 }
 
 /* Brown */
 .theme-base-0f .sidebar {
-  background-color: #8f5536;
+    background-color: #8f5536;
 }
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
+    color: #8f5536;
 }
 
 /* Berkeley Blue */
 .theme-base-0g .sidebar {
-  background-color: #1D3557;
+    background-color: #1d3557;
 }
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
-  color: #1D3557;
+    color: #1d3557;
 }
 
 .btn.social {
-  background-color: #1D3557;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
+    background-color: #1d3557;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
 }
 
 .btn.social:hover {
-  background-color: #39475a;
+    background-color: #39475a;
 }
 
 #sidebar-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: auto; /* This pushes the block to the bottom */
-  padding-top: 20px;
-  padding: 0;            /* remove default padding */
-  margin-bottom: 0;      /* remove any extra margin */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: auto; /* This pushes the block to the bottom */
+    padding-top: 20px;
+    padding: 0; /* remove default padding */
+    margin-bottom: 0; /* remove any extra margin */
 }
 
 .btn.social svg {
-  width: 30px;
-  height: 30px;
-  fill: white;
+    width: 30px;
+    height: 30px;
+    fill: white;
 }
