@@ -10,179 +10,454 @@ title: High mass - High energy models
 <!-- OrbitControls.js Script -->
 <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
-<h2> High mass - High energy models </h2>
+<h2>High mass - High energy models</h2>
 
 <!-- MODEL HS19.8 -->
 
 <h3>Model SW19.8</h3>
 <script>
-  // Ensure `timeSteps` is available globally
-  window.modelFile =  'media/elements/hs198_elements_all.glb';
+    // Ensure `timeSteps` is available globally
+    window.modelFile = "media/elements/hs198_arrow.gltf";
 </script>
 
 <!-- Define the container -->
 <div class="threejs-container">
-  <div id="threejs-canvas", tag="hs131"></div>
-  
-  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
-    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
-    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
-    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
-    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
-    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
-  </div>
-  
-  <div id="container">
-    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
-    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
-  </div>
-  
-  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
-    <h2>Loading...</h2>
-  </div>  
+    <div id="threejs-canvas" , tag="hs198"></div>
 
-  <!-- Load JavaScript Files -->
-  <script src="media/setupScene.js"></script>
-  <script src="media/elements/loadModel.js"></script>
-  
+    <div id="legend" style="position: absolute; top: 10px; left: 20px">
+        <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
+        <button
+            class="element-button"
+            id="toggle_mesh0"
+            style="background-color: cyan"
+        >
+            C12
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh1"
+            style="background-color: blue"
+        >
+            O16
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh2"
+            style="background-color: #b0b0b0"
+        >
+            Si28
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh3"
+            style="background-color: red"
+        >
+            Ni56
+        </button>
+    </div>
+
+    <div id="container">
+        <button
+            class="background-button"
+            id="whiteb"
+            style="border: 1px solid #333; background-color: #f1f1f1"
+        ></button>
+        <button
+            class="background-button"
+            id="blackb"
+            style="border: 1px solid #f1f1f1; background-color: #333"
+        ></button>
+    </div>
+
+    <div
+        id="loading-text"
+        style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        "
+    >
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- Load JavaScript Files -->
+    <script src="media/setupScene.js"></script>
+    <script src="media/elements/loadModel.js"></script>
 </div>
 
 <!-- MODEL HS25.5 -->
 
 <h3>Model SW25.5</h3>
 <script>
-  // Ensure `timeSteps` is available globally
-  window.modelFile =  'media/elements/hs255_elements_all.glb';
+    // Ensure `timeSteps` is available globally
+    window.modelFile = "media/elements/hs255_arrow.gltf";
 </script>
 
 <!-- Define the container -->
 <div class="threejs-container">
-  <div id="threejs-canvas", tag="hs131"></div>
-  
-  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
-    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
-    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
-    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
-    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
-    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
-  </div>
-  
-  <div id="container">
-    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
-    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
-  </div>
-  
-  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
-    <h2>Loading...</h2>
-  </div>  
+    <div id="threejs-canvas" , tag="hs255"></div>
 
-  <!-- Load JavaScript Files -->
-  <script src="media/setupScene.js"></script>
-  <script src="media/elements/loadModel.js"></script>
-  
+    <div id="legend" style="position: absolute; top: 10px; left: 20px">
+        <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
+        <button
+            class="element-button"
+            id="toggle_mesh0"
+            style="background-color: cyan"
+        >
+            C12
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh1"
+            style="background-color: blue"
+        >
+            O16
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh2"
+            style="background-color: #b0b0b0"
+        >
+            Si28
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh3"
+            style="background-color: red"
+        >
+            Ni56
+        </button>
+    </div>
+
+    <div id="container">
+        <button
+            class="background-button"
+            id="whiteb"
+            style="border: 1px solid #333; background-color: #f1f1f1"
+        ></button>
+        <button
+            class="background-button"
+            id="blackb"
+            style="border: 1px solid #f1f1f1; background-color: #333"
+        ></button>
+    </div>
+
+    <div
+        id="loading-text"
+        style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        "
+    >
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- Load JavaScript Files -->
+    <script src="media/setupScene.js"></script>
+    <script src="media/elements/loadModel.js"></script>
+</div>
+
+<!-- MODEL HS25.6 -->
+
+<h3>Model SW25.6</h3>
+<script>
+    // Ensure `timeSteps` is available globally
+    window.modelFile = "media/elements/hs256_arrow.gltf";
+</script>
+
+<!-- Define the container -->
+<div class="threejs-container">
+    <div id="threejs-canvas" , tag="hs256"></div>
+
+    <div id="legend" style="position: absolute; top: 10px; left: 20px">
+        <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
+        <button
+            class="element-button"
+            id="toggle_mesh0"
+            style="background-color: cyan"
+        >
+            C12
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh1"
+            style="background-color: blue"
+        >
+            O16
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh2"
+            style="background-color: #b0b0b0"
+        >
+            Si28
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh3"
+            style="background-color: red"
+        >
+            Ni56
+        </button>
+    </div>
+
+    <div id="container">
+        <button
+            class="background-button"
+            id="whiteb"
+            style="border: 1px solid #333; background-color: #f1f1f1"
+        ></button>
+        <button
+            class="background-button"
+            id="blackb"
+            style="border: 1px solid #f1f1f1; background-color: #333"
+        ></button>
+    </div>
+
+    <div
+        id="loading-text"
+        style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        "
+    >
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- Load JavaScript Files -->
+    <script src="media/setupScene.js"></script>
+    <script src="media/elements/loadModel.js"></script>
 </div>
 
 <!-- MODEL HS26.2 -->
 
 <h3>Model SW26.2</h3>
 <script>
-  // Ensure `timeSteps` is available globally
-  window.modelFile =  'media/elements/hs262_elements_all.glb';
+    // Ensure `timeSteps` is available globally
+    window.modelFile = "media/elements/hs262_arrow.gltf";
 </script>
 
 <!-- Define the container -->
 <div class="threejs-container">
-  <div id="threejs-canvas", tag="hs131"></div>
-  
-  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
-    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
-    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
-    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
-    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
-    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
-  </div>
-  
-  <div id="container">
-    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
-    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
-  </div>
-  
-  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
-    <h2>Loading...</h2>
-  </div>  
+    <div id="threejs-canvas" , tag="hs262"></div>
 
-  <!-- Load JavaScript Files -->
-  <script src="media/setupScene.js"></script>
-  <script src="media/elements/loadModel.js"></script>
-  
+    <div id="legend" style="position: absolute; top: 10px; left: 20px">
+        <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
+        <button
+            class="element-button"
+            id="toggle_mesh0"
+            style="background-color: cyan"
+        >
+            C12
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh1"
+            style="background-color: blue"
+        >
+            O16
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh2"
+            style="background-color: #b0b0b0"
+        >
+            Si28
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh3"
+            style="background-color: red"
+        >
+            Ni56
+        </button>
+    </div>
+
+    <div id="container">
+        <button
+            class="background-button"
+            id="whiteb"
+            style="border: 1px solid #333; background-color: #f1f1f1"
+        ></button>
+        <button
+            class="background-button"
+            id="blackb"
+            style="border: 1px solid #f1f1f1; background-color: #333"
+        ></button>
+    </div>
+
+    <div
+        id="loading-text"
+        style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        "
+    >
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- Load JavaScript Files -->
+    <script src="media/setupScene.js"></script>
+    <script src="media/elements/loadModel.js"></script>
 </div>
 
 <!-- MODEL HS27.0 -->
 
 <h3>Model SW27.0</h3>
 <script>
-  // Ensure `timeSteps` is available globally
-  window.modelFile =  'media/elements/hs27_elements_all.glb';
+    // Ensure `timeSteps` is available globally
+    window.modelFile = "media/elements/hs27_arrow.gltf";
 </script>
 
 <!-- Define the container -->
 <div class="threejs-container">
-  <div id="threejs-canvas", tag="hs131"></div>
-  
-  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
-    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
-    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
-    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
-    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
-    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
-  </div>
-  
-  <div id="container">
-    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
-    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
-  </div>
-  
-  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
-    <h2>Loading...</h2>
-  </div>  
+    <div id="threejs-canvas" , tag="hs27"></div>
 
-  <!-- Load JavaScript Files -->
-  <script src="media/setupScene.js"></script>
-  <script src="media/elements/loadModel.js"></script>
-  
+    <div id="legend" style="position: absolute; top: 10px; left: 20px">
+        <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
+        <button
+            class="element-button"
+            id="toggle_mesh0"
+            style="background-color: cyan"
+        >
+            C12
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh1"
+            style="background-color: blue"
+        >
+            O16
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh2"
+            style="background-color: #b0b0b0"
+        >
+            Si28
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh3"
+            style="background-color: red"
+        >
+            Ni56
+        </button>
+    </div>
+
+    <div id="container">
+        <button
+            class="background-button"
+            id="whiteb"
+            style="border: 1px solid #333; background-color: #f1f1f1"
+        ></button>
+        <button
+            class="background-button"
+            id="blackb"
+            style="border: 1px solid #f1f1f1; background-color: #333"
+        ></button>
+    </div>
+
+    <div
+        id="loading-text"
+        style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        "
+    >
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- Load JavaScript Files -->
+    <script src="media/setupScene.js"></script>
+    <script src="media/elements/loadModel.js"></script>
 </div>
 
 <!-- MODEL HS27.3 -->
 
 <h3>Model SW27.3</h3>
 <script>
-  // Ensure `timeSteps` is available globally
-  window.modelFile =  'media/elements/hs273_elements_all.glb';
+    // Ensure `timeSteps` is available globally
+    window.modelFile = "media/elements/hs273_arrow.gltf";
 </script>
 
 <!-- Define the container -->
 <div class="threejs-container">
-  <div id="threejs-canvas", tag="hs131"></div>
-  
-  <div id="legend" style="position: absolute; top: 10px; left: 20px;">
-    <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>
-    <button class="element-button" id="toggle_mesh1" style="background-color: cyan;">C12</button>
-    <button class="element-button" id="toggle_mesh2" style="background-color: blue;">O16</button>
-    <button class="element-button" id="toggle_mesh3" style="background-color: magenta;">Si28</button>
-    <button class="element-button" id="toggle_mesh4" style="background-color: red;">Ni56</button>
-  </div>
-  
-  <div id="container">
-    <button class="background-button" id="whiteb" style="border: 1px solid #333; background-color: #f1f1f1;"></button>
-    <button class="background-button" id="blackb" style="border: 1px solid #f1f1f1; background-color: #333;"></button>
-  </div>
-  
-  <div id="loading-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: black;">
-    <h2>Loading...</h2>
-  </div>  
+    <div id="threejs-canvas" , tag="hs273"></div>
 
-  <!-- Load JavaScript Files -->
-  <script src="media/setupScene.js"></script>
-  <script src="media/elements/loadModel.js"></script>
-  
+    <div id="legend" style="position: absolute; top: 10px; left: 20px">
+        <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
+        <button
+            class="element-button"
+            id="toggle_mesh0"
+            style="background-color: cyan"
+        >
+            C12
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh1"
+            style="background-color: blue"
+        >
+            O16
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh2"
+            style="background-color: #b0b0b0"
+        >
+            Si28
+        </button>
+        <button
+            class="element-button"
+            id="toggle_mesh3"
+            style="background-color: red"
+        >
+            Ni56
+        </button>
+    </div>
+
+    <div id="container">
+        <button
+            class="background-button"
+            id="whiteb"
+            style="border: 1px solid #333; background-color: #f1f1f1"
+        ></button>
+        <button
+            class="background-button"
+            id="blackb"
+            style="border: 1px solid #f1f1f1; background-color: #333"
+        ></button>
+    </div>
+
+    <div
+        id="loading-text"
+        style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        "
+    >
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- Load JavaScript Files -->
+    <script src="media/setupScene.js"></script>
+    <script src="media/elements/loadModel.js"></script>
 </div>
