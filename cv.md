@@ -5,11 +5,14 @@ title: Curriculum Vitae
 
 ---
 
-## Personal data 
-**Date of birth**: October 4th, 1996  
-**Nationality**: Italian  
-**Personal email**: <bea.giudici96@gmail.com>  
-**ORCID ID**: [https://orcid.org/0000-0002-8603-4302](https://orcid.org/0000-0002-8603-4302)
+## Personal data
+**Date of birth**: October 4th, 1996
+
+**Nationality**: Italian
+
+**Personal email**: <bea.giudici96@gmail.com>
+
+**ORCID ID**: [0000-0002-8603-4302](https://orcid.org/0000-0002-8603-4302){:target="_blank"}
 
 ---
 
@@ -23,27 +26,27 @@ title: Curriculum Vitae
 
 #### PhD in Astronomy and Astrophysics at Universitat de València
 
-Grade: Sobresaliente mención Cum Laude y mención Internacional  
-Project: "3D-LoSS 3 dimensional, long-time supernova simulations (CIDEGENT/2019/031)"  
-Supervisor: Dr. Michael Gabler  
+Grade: Sobresaliente mención Cum Laude y mención Internacional
+Project: "3D-LoSS 3 dimensional, long-time supernova simulations (CIDEGENT/2019/031)"
+Supervisor: Dr. Michael Gabler
 Tutor: Prof. Miguel Ángel Aloy Torás
 
 ### 2018 - 2020
 
 #### Master's degree in Theoretical Physics at Università degli Studi di Milano - Bicocca
 
-Grade: 110/110 cum Laude  
-Thesis: "Implementation of High-Order Methods in Numerical Simulations of Neutron Stars"  
-Supervisor: Prof. Bruno Giacomazzo  
-Co-Supervisor: Prof. Monica Colpi  
+Grade: 110/110 cum Laude
+Thesis: "Implementation of High-Order Methods in Numerical Simulations of Neutron Stars"
+Supervisor: Prof. Bruno Giacomazzo
+Co-Supervisor: Prof. Monica Colpi
 
 ### 2015 - 2018
 
 #### Bachelor's degree in Physics at Università degli Studi di Milano - Bicocca
 
-Grade: 110/110 cum Laude  
-Thesis: "Interpretative model of the evolution of black hole binaries in stellar environments"  
-Supervisor: Prof. Massimo Dotti  
+Grade: 110/110 cum Laude
+Thesis: "Interpretative model of the evolution of black hole binaries in stellar environments"
+Supervisor: Prof. Massimo Dotti
 
 ### 2010 - 2015
 
@@ -79,7 +82,7 @@ Private lessons of physics and mathematics to high school and bachelor's student
 
 1. F. Cipolletta, J.V. Kalinani, E. Giangrandi, B. Giacomazzo, R. Ciolfi, L. Sala, **B. Giudici**, *Spritz: general relativistic magnetohydrodynamics with neutrinos*, Classical and Quantum Gravity, vol. 38, no. 8, p. 085021, Mar. 2021, **DOI** [10.1088/1361-6382/abebb7](https://iopscience.iop.org/article/10.1088/1361-6382/abebb7){:target="_blank"}.
 
-2. S. Orlando, M. Miceli, M. Ono, S. Nagataki, M.-A. Aloy, F. Bocchino, M. Gabler, **B. Giudici**, R. Giuffrida, E. Greco, G. La Malfa, S.-H. Lee, M. Obergaulinger, O. Petruk, V. Sapienza, S. Ustamujic, J. Weng, *Tracing the ejecta structure of SN 1987A: Insights and diagnostics from 3D MHD simulations*, **arXiv** [2504.19896](https://arxiv.org/abs/2504.19896v1){:target="_blank"}.
+2. S. Orlando, M. Miceli, M. Ono, S. Nagataki, M.-A. Aloy, F. Bocchino, M. Gabler, **B. Giudici**, R. Giuffrida, E. Greco, G. La Malfa, S.-H. Lee, M. Obergaulinger, O. Petruk, V. Sapienza, S. Ustamujic, J. Weng, *Tracing the ejecta structure of SN 1987A: Insights and diagnostics from 3D MHD simulations*, Astronomy & Astrophysics, vol. 699 no. A305, Jul. 2025, **DOI** [10.1051/0004-6361/202554862](https://doi.org/10.1051/0004-6361/202554862){:target="_blank"}.
 
 ---
 
@@ -93,11 +96,11 @@ Private lessons of physics and mathematics to high school and bachelor's student
 
 1. "Supernovae From Red Super Giant Stars". [PHAROS Conference 2022](https://indico.ice.csic.es/event/29/overview){:target="_blank"}. 16-19 May 2022. Università "La Sapienza", Rome, Italy.
 2. "Supernovae From Red Super Giant Stars". [2nd Workshop on Compact Objects, Gravitational Waves and Deep Learning](https://indico.global/event/9015/overview){:target="_blank"}. 20-23 June 2022. ADEIT - Universitat de València, València, Spain.
-3. "Supernovae From Red Super Giant Stars". 3D Supernova (Remnants). How to connect simulations and observations?. 5-8 September 2022. ADEIT - Universitat de València, València, Spain. 
+3. "Supernovae From Red Super Giant Stars". 3D Supernova (Remnants). How to connect simulations and observations?. 5-8 September 2022. ADEIT - Universitat de València, València, Spain.
 4. "Instabilities in CCSNe: the study of 14 red super giant progenitor models in 3D". [Anisotropies in core-collapse supernova explosions 2](https://indico.ict.inaf.it/event/2537/){:target="_blank"}. 23-26 October 2023. Palermo, Italy.
 5. "Instabilities in CCSNe: the study of 14 red super giant progenitor models in 3D". [Supervirtual 2023](https://sites.google.com/view/supervirtual2023/){:target="_blank"}. 6-10 November 2023. Online.
 6. "Hydrodynamic instabilities in three-dimensional simulations of neutrino-driven supernovae of 14 red supergiant". [European Astronomical Society (EAS) Annual Meeting 2024](https://eas.unige.ch/EAS2024/){:target="_blank"}. 01 - 05 July 2024. Padua, Italy.
-7. "Hydrodynamic of Long-Time Core-Collapse Supernovae: the Case of 12 Red Supergiant Progenitors". [CoCoNut Meeting 2024](https://eventos.adeit.es/119383/detail/coconut-meeting-2024.html){:target="_blank"}. 11 - 13 December 2024. ADEIT - Universitat de València, València, Spain. 
+7. "Hydrodynamic of Long-Time Core-Collapse Supernovae: the Case of 12 Red Supergiant Progenitors". [CoCoNut Meeting 2024](https://eventos.adeit.es/119383/detail/coconut-meeting-2024.html){:target="_blank"}. 11 - 13 December 2024. ADEIT - Universitat de València, València, Spain.
 
 ### Posters
 
