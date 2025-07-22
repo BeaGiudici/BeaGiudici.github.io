@@ -30,6 +30,7 @@ Grade: Sobresaliente mención Cum Laude y mención Internacional
 Project: "3D-LoSS 3 dimensional, long-time supernova simulations (CIDEGENT/2019/031)"
 Supervisor: Dr. Michael Gabler
 Tutor: Prof. Miguel Ángel Aloy Torás
+View [here]{https://roderic.uv.es/items/f3ad5f05-e72d-40a5-8729-2d41cc96ae5a/full} the thesis on RODERIC, the nstitutional repository of the Universitat de València.
 
 ### 2018 - 2020
 
