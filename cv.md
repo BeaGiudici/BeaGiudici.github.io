@@ -27,18 +27,26 @@ title: Curriculum Vitae
 #### PhD in Astronomy and Astrophysics at Universitat de València
 
 Grade: Sobresaliente mención Cum Laude y mención Internacional
+
 Project: "3D-LoSS 3 dimensional, long-time supernova simulations (CIDEGENT/2019/031)"
+
 Supervisor: Dr. Michael Gabler
+
 Tutor: Prof. Miguel Ángel Aloy Torás
-View [here](https://roderic.uv.es/items/f3ad5f05-e72d-40a5-8729-2d41cc96ae5a/full) the thesis on RODERIC, the nstitutional repository of the Universitat de València.
+
+View [here](https://roderic.uv.es/items/f3ad5f05-e72d-40a5-8729-2d41cc96ae5a/full) the thesis on RODERIC,
+the institutional repository of the Universitat de València.
 
 ### 2018 - 2020
 
 #### Master's degree in Theoretical Physics at Università degli Studi di Milano - Bicocca
 
 Grade: 110/110 cum Laude
+
 Thesis: "Implementation of High-Order Methods in Numerical Simulations of Neutron Stars"
+
 Supervisor: Prof. Bruno Giacomazzo
+
 Co-Supervisor: Prof. Monica Colpi
 
 ### 2015 - 2018
@@ -46,7 +54,9 @@ Co-Supervisor: Prof. Monica Colpi
 #### Bachelor's degree in Physics at Università degli Studi di Milano - Bicocca
 
 Grade: 110/110 cum Laude
+
 Thesis: "Interpretative model of the evolution of black hole binaries in stellar environments"
+
 Supervisor: Prof. Massimo Dotti
 
 ### 2010 - 2015
