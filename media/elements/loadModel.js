@@ -45,7 +45,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
         });
         console.log("Model loaded successfully!");
         // Optionally, if model scale or position is off, adjust:
-        gltf.scene.scale.set(1e-15, 1e-15, 1e-15); // Optional: adjust size of the model
+        gltf.scene.scale.set(1.25e-15, 1.25e-15, 1.25e-15); // Optional: adjust size of the model
         gltf.scene.position.set(0, 0, 0); // Optional: position of the model
 
         // Optional: Add a helper to view the bounding box of the model
