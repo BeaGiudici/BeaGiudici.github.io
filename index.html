@@ -2,26 +2,22 @@
 layout: default
 title: Home
 ---
-<div>
-  <img src="media/volume_hs18_2.png" style="width: 200%;">
-</div>
 
 <div>
-  <h1>Welcome to my personal page!</h1>
-  <p>This is a personal page for me to share information about myself and my work. Have a nice stay!</p>
+    <h1>Welcome to my personal page!</h1>
+    <p>
+        This is a personal page for me to share information about myself and my
+        work. Have a nice stay!
+    </p>
 </div>
 
 <div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-	      {{ post.title }}
-      </a>
-    </h1>
-    {{ post.content }}
-  </div>
-  {% endfor %}
+    {% for post in paginator.posts %}
+    <div class="post">
+        <h2 class="post-title">{{ post.title }}</h2>
+        {{ post.content }}
+    </div>
+    {% endfor %}
 </div>
 
 <!--<div class="pagination">
