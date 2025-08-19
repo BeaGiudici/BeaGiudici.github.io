@@ -1,32 +1,32 @@
 # Dependencies
-markdown:         kramdown
-highlighter:      pygments
+markdown: kramdown
+highlighter: pygments
 
 # Permalinks
-permalink:        /:path/:name.html
+permalink: /:path/:name.html
 #include:
 #  - media/shocks
 #relative_permalinks: true
 
 # Setup
-title:           'Beatrice Giudici'
-tagline:          'My personal page'
-description:      'PhD student @ Universitat de València'
-url:              https://beagiudici.github.io
-baseurl:         
+title: "Beatrice Giudici"
+tagline: "My personal page"
+description: "PostDoc @ Universitat de València"
+url: https://beagiudici.github.io
+baseurl:
 
 author:
-  name:           'Beatrice Giudici'
-  email:          'bea.giudici96@gmail.com'
+  name: "Beatrice Giudici"
+  email: "bea.giudici96@gmail.com"
 
 plugins: [jekyll-paginate]
-paginate:         5
+paginate: 5
 
 # Custom vars
-version:          1.0.0
+version: 1.0.0
 
-github:           
-  repo:           https://github.com/BeaGiudici/
+github:
+  repo: https://github.com/BeaGiudici/
 
 collections:
   media:
