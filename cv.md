@@ -12,6 +12,8 @@ title: Curriculum Vitae
 
 **Personal email**: <bea.giudici96@gmail.com>
 
+**Work email**: <beatrice.giudici@uv.es>
+
 **ORCID ID**: [0000-0002-8603-4302](https://orcid.org/0000-0002-8603-4302){:target="_blank"}
 
 ---
