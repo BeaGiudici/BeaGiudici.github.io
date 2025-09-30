@@ -126,7 +126,7 @@ Grade: 100/100
 1. "Supernovae From Red Super Giant Stars". [@FlipPhysics](https://indico.ific.uv.es/event/6372/overview){:target="_blank"}. 21-25 March 2022. IFIC - Universitat de València. València, Spain.
 2. "Supernovae From Red Super Giant Stars". [European Astronomical Society (EAS) Annual Meeting 2022](https://eas.unige.ch/EAS2022/){:target="_blank"}. June 27th - July 1st 2022. València, Spain.
 3. "Hydrodynamic instabilities in 3D simulations of neutrino-driven CCSNe from RSG progenitors" (S4.9). [Supernova Renmants III - An Odyssey in Space After Stellar Death](https://snr2024.astro.noa.gr/){:target="_blank"}. 9 - 15 June 2024. Chania, Crete, Greece.
-4. "Instabilities IN 3D Simulations of Neutrino Driven CCSNe". [One hundred years of supernova science](https://sites.google.com/view/supernova100/home). 18 - 22 August 2025. Stockholm, Sweden.
+4. "Instabilities IN 3D Simulations of Neutrino Driven CCSNe". [One hundred years of supernova science](https://sites.google.com/view/supernova100/home){:target="_blank"}. 18 - 22 August 2025. Stockholm, Sweden.
 
 ### Organization committee
 
