@@ -144,7 +144,7 @@ Good mathematical skills and quick problem solving.
 ## Languages
 - Italian (native)
 - English (C1)
-- Spanish (B2)
+- Spanish (C1)
 
 ---
 ---
