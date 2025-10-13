@@ -18,11 +18,39 @@ title: Curriculum Vitae
 
 ---
 
-## Education
+## Work Experience
 
 ### Present
 
-#### Postdoctoral researcher (Técnica superior de soporte a la investigación) at Universitat de València
+#### Postdoctoral researcher at Universitat de València
+
+Postdoctoral researcher (Técnica superior de soporte a la investigación).
+
+Project: "MRR/Astrofísica computacional en la era Multi-Mensajero CPI-25-024"
+
+PI: Prof. Miguel Ángel Aloy Torás
+
+### 2019 - 2020
+
+#### Tutor for the Bachelor-level course 'Astrophysics Laboratory'
+
+The course introduces the techniques for observational astrophysics, allowing the students to have first experience in sources observation and signal calibration. The tutor has to help the students dealing with data analysis. This activity has been done remotely due to COVID-19 pandemic.
+
+### 2018- 2020
+
+#### LabEx Project
+
+The project, held by the Department of Physics in the University of Milano - Bicocca, aims to bring the concepts of experimental physics to high school students, who will be able to reproduce some of the fundamental experiments in the history of physics by themselves.
+
+### 2015 - 2019
+
+#### Provate Lessons
+
+Private lessons of physics and mathematics to high school and bachelor's students.
+
+---
+
+## Education
 
 ### 2021 - 2025
 
@@ -30,7 +58,7 @@ title: Curriculum Vitae
 
 Grade: Sobresaliente mención Cum Laude y mención Internacional
 
-Project: "3D-LoSS 3 dimensional, long-time supernova simulations (CIDEGENT/2019/031)"
+Project: "3D-LoSS 3 dimensional, long-time supernova simulations"
 
 Supervisor: Dr. Michael Gabler
 
@@ -69,28 +97,6 @@ Grade: 100/100
 
 ---
 
-## Work Experience
-
-### 2019 - 2020
-
-#### Tutor for the Bachelor-level course 'Astrophysics Laboratory'
-
-The course introduces the techniques for observational astrophysics, allowing the students to have first experience in sources observation and signal calibration. The tutor has to help the students dealing with data analysis. This activity has been done remotely due to COVID-19 pandemic.
-
-### 2018- 2020
-
-#### LabEx Project
-
-The project, held by the Department of Physics in the University of Milano - Bicocca, aims to bring the concepts of experimental physics to high school students, who will be able to reproduce some of the fundamental experiments in the history of physics by themselves.
-
-### 2015 - 2019
-
-#### Provate Lessons
-
-Private lessons of physics and mathematics to high school and bachelor's students.
-
----
-
 ## Publications
 
 1. F. Cipolletta, J.V. Kalinani, E. Giangrandi, B. Giacomazzo, R. Ciolfi, L. Sala, **B. Giudici**, *Spritz: general relativistic magnetohydrodynamics with neutrinos*, Classical and Quantum Gravity, vol. 38, no. 8, p. 085021, Mar. 2021, **DOI** [10.1088/1361-6382/abebb7](https://iopscience.iop.org/article/10.1088/1361-6382/abebb7){:target="_blank"}.
@@ -120,6 +126,7 @@ Private lessons of physics and mathematics to high school and bachelor's student
 1. "Supernovae From Red Super Giant Stars". [@FlipPhysics](https://indico.ific.uv.es/event/6372/overview){:target="_blank"}. 21-25 March 2022. IFIC - Universitat de València. València, Spain.
 2. "Supernovae From Red Super Giant Stars". [European Astronomical Society (EAS) Annual Meeting 2022](https://eas.unige.ch/EAS2022/){:target="_blank"}. June 27th - July 1st 2022. València, Spain.
 3. "Hydrodynamic instabilities in 3D simulations of neutrino-driven CCSNe from RSG progenitors" (S4.9). [Supernova Renmants III - An Odyssey in Space After Stellar Death](https://snr2024.astro.noa.gr/){:target="_blank"}. 9 - 15 June 2024. Chania, Crete, Greece.
+4. "Instabilities IN 3D Simulations of Neutrino Driven CCSNe". [One hundred years of supernova science](https://sites.google.com/view/supernova100/home){:target="_blank"}. 18 - 22 August 2025. Stockholm, Sweden.
 
 ### Organization committee
 
