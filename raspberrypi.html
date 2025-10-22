@@ -2,3 +2,88 @@
 layout: page
 title: Raspberry Pi Project
 ---
+
+<p>
+  I started this small project in early 2025 to have somewhere to store data and documents that I needed to access from both my computers. 
+  It quickly transformed into something much more than just a simple sharing system.
+</p>
+
+<p>
+  I started a personal journal in Obsidian to keep track of the setup and now I want to share it here.
+  My server is affectionately called <code>databerry</code> and will be referenced as such.
+</p>
+
+<h2>Hardware</h2>
+
+<ul>
+  <li>
+    <a href="https://www.amazon.es/dp/B0D1N3V2FF?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">Raspberry Pi 4 Starter Kit</a>:
+    <ul>
+      <li>Raspberry Pi 4 4GB</li>
+      <li>Power supply</li>
+      <li>Official case</li>
+      <li>Micro HDMI to HDMI cable</li>
+      <li>64GB SD memory card</li>
+      <li>Aluminum heatsink</li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://www.amazon.es/dp/B0BN7WVRVZ?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1" target="_blank">Ethernet cable</a>
+  </li>
+  <li>
+    <a href="https://www.amazon.es/dp/B0B2K3ZCHH?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1" target="_blank">Kingspec SSD 512 GB 2.5'' SATA III</a>
+  </li>
+  <li>
+    <a href="https://www.amazon.es/dp/B0BQ2XJ23Y?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1" target="_blank">SSD case</a>
+  </li>
+</ul>
+
+<h2>Operating system</h2>
+<p>
+  <b>Raspberry Pi OS Lite (64-bit)</b> - based on Debian Bookworm
+</p>
+
+<p>
+  <i>Note: I tried to update it to the newer Debian Trixie but I had compatibility issues, so for now I will keep this configuration.</i>
+</p>
+
+<p>
+  You can download this and many more options with the <a href="https://www.raspberrypi.com/software/" targer="_blank">Raspberry Pi Imager</a>. 
+  Install it on your personal machine using <code>sudo apt install rpi-imager</code> in a terminal window on Linux systems, or download 
+  <code>.deb</code>, <code>.exe</code>, or <code>.dmg</code> packages depending on your OS.
+</p>
+
+<p>
+  I prefer the Lite version since I would not use the Desktop environment anyway.
+  It is possible to configure a bunch of options before "baking the pi", such as username and password. 
+  If you decide not to do so, the default option would be
+  <ul>
+    <li>Username: <code>pi</code></li>
+    <li>Password: <code>raspberrypi</code></li>
+  </ul>
+  It is possible to set up also rsa public-private pair keys for connecting during this procedure.
+  Once the system is booted on the SD, just insert the card in the Pi and connect via ssh using your username and password.
+</p>
+
+<h2>Software</h2>
+
+<ul>
+  <li>
+    <a href="/databerry_docs/omv.html">Open Media Vault</a>
+  </li>
+  <li>
+    <a href="/databerry_docs/docker.md">Docker</a>
+  </li>
+  <li>
+    Pi-hole
+  </li>
+  <li>
+    PiVPN
+  </li>
+  <li>
+    fail2ban
+  </li>
+  <li>
+    Jellyfin
+  </li>
+</ul>
