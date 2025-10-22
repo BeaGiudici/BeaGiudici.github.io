@@ -3,6 +3,8 @@ layout: default
 title: Model SW13.1
 ---
 
+<link rel="stylesheet" href="{{ site.baseurl }}/public/main.css">
+
 <!-- OrbitControls.js Script -->
 <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <button class="back-button" onclick="history.back()">Back</button>
@@ -19,10 +21,11 @@ title: Model SW13.1
 <!-- Define the container -->
 <div
     class="threejs-container"
-    data-model-key="W12_5"
+    data-model-key="hs13_1"
     ,
-    data-timesteps='["media/shocks/hs13_1_00.gltf", "media/shocks/hs13_1_01.gltf", "media/shocks/hs13_1_02.gltf", "media/shocks/hs13_1_03.gltf", "media/shocks/hs13_1_04.gltf",
-"media/shocks/hs13_1_05.gltf", "media/shocks/hs13_1_06.gltf", "media/shocks/hs13_1_07.gltf"]'
+    data-timesteps='["{{ site.baseurl }}/media/shocks/hs13_1_00.gltf", "{{ site.baseurl }}/media/shocks/hs13_1_01.gltf", 
+    "{{ site.baseurl }}/media/shocks/hs13_1_02.gltf", "{{ site.baseurl }}/media/shocks/hs13_1_03.gltf", "{{ site.baseurl }}/media/shocks/hs13_1_04.gltf",
+    "{{ site.baseurl }}/media/shocks/hs13_1_05.gltf", "{{ site.baseurl }}/media/shocks/hs13_1_06.gltf", "{{ site.baseurl }}/media/shocks/hs13_1_07.gltf"]'
 >
     <div id="threejs-canvas"></div>
 
@@ -83,6 +86,6 @@ title: Model SW13.1
     </div>
 
     <!-- Load JavaScript Files -->
-    <script src="media/setupScene.js"></script>
-    <script src="media/shocks/loadModel.js"></script>
+    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
+    <script src="{{ site.baseurl }}/media/shocks/loadModel.js"></script>
 </div>

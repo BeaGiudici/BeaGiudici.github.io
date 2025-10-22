@@ -26,7 +26,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
   loadingText.style.display = "block"; // Ensure the text is visible before loading starts
 
   // Load time labels from JSON based on model
-  fetch("media/shocks/times.json")
+  fetch("../media/shocks/times.json")
     .then((response) => response.json())
     .then((data) => {
       if (!data[modelKey] || !data[modelKey].times) {

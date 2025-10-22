@@ -12,8 +12,8 @@ permalink: /:path/:name.html
 title: "Beatrice Giudici"
 tagline: "My personal page"
 description: "PostDoc @ Universitat de València"
-url: https://beagiudici.github.io
-baseurl:
+url: "https://beagiudici.github.io"
+baseurl: ""
 
 author:
   name: "Beatrice Giudici"
@@ -32,3 +32,6 @@ collections:
   media:
     output: true
     permalink: /media/:path/:name.html
+
+include:
+  - public

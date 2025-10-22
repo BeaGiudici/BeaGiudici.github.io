@@ -1,7 +1,9 @@
 ---
 layout: default
-title: High mass - High energy models (Part 2)
+title: Low mass models
 ---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/public/main.css">
 
 <!-- Three.js Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -10,7 +12,7 @@ title: High mass - High energy models (Part 2)
 <!-- OrbitControls.js Script -->
 <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <button class="back-button" onclick="history.back()">Back</button>
-<h2>High mass - High energy models</h2>
+<h2>Low mass models</h2>
 
 Densities of the 4% most massive part for each element and model in this class
 (in units of 10<sup>-15</sup> g/cm<sup>3</sup>).
@@ -18,47 +20,47 @@ Densities of the 4% most massive part for each element and model in this class
 <table border="1" frame="box" rules="cols" cellpadding="10">
     <tbody>
         <tr>
-            <td style="text-align: center">SW25.6</td>
-            <td style="text-align: center">1.79</td>
-            <td style="text-align: center">49.13</td>
-            <td style="text-align: center">7.57</td>
-            <td style="text-align: center">0.96</td>
+            <th style="text-align: center">Model name</th>
+            <th style="text-align: center">C12</th>
+            <th style="text-align: center">O16</th>
+            <th style="text-align: center">Si28</th>
+            <th style="text-align: center">Ni56</th>
         </tr>
         <tr>
-            <td style="text-align: center">SW26.2</td>
-            <td style="text-align: center">1.79</td>
-            <td style="text-align: center">39.16</td>
+            <td style="text-align: center">WH12.5</td>
             <td style="text-align: center">3.04</td>
-            <td style="text-align: center">1.10</td>
+            <td style="text-align: center">9.26</td>
+            <td style="text-align: center">0.14</td>
+            <td style="text-align: center">0.64</td>
         </tr>
         <tr>
-            <td style="text-align: center">SW27.0</td>
-            <td style="text-align: center">1.30</td>
-            <td style="text-align: center">32.32</td>
-            <td style="text-align: center">2.07</td>
-            <td style="text-align: center">0.87</td>
+            <td style="text-align: center">SW13.1</td>
+            <td style="text-align: center">3.81</td>
+            <td style="text-align: center">12.84</td>
+            <td style="text-align: center">0.19</td>
+            <td style="text-align: center">0.75</td>
         </tr>
         <tr>
-            <td style="text-align: center">SW27.3</td>
-            <td style="text-align: center">1.54</td>
-            <td style="text-align: center">32.89</td>
-            <td style="text-align: center">1.87</td>
-            <td style="text-align: center">0.68</td>
+            <td style="text-align: center">SW14.2</td>
+            <td style="text-align: center">6.71</td>
+            <td style="text-align: center">18.24</td>
+            <td style="text-align: center">0.18</td>
+            <td style="text-align: center">0.69</td>
         </tr>
     </tbody>
 </table>
 
-<!-- MODEL HS26.2 -->
+<!-- MODEL WH12.5 -->
 
-<h3>Model SW26.2</h3>
+<h3>Model WH12.5</h3>
 <script>
     // Ensure `timeSteps` is available globally
-    window.modelFile = "media/elements/hs262_arrow.gltf";
+    window.modelFile = "{{ site.baseurl }}/media/elements/w125_arrow.gltf";
 </script>
 
 <!-- Define the container -->
 <div class="threejs-container">
-    <div id="threejs-canvas" , tag="hs262"></div>
+    <div id="threejs-canvas" , tag="w125"></div>
 
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
@@ -115,25 +117,25 @@ Densities of the 4% most massive part for each element and model in this class
             color: black;
         "
     >
-        <h2>Loading...</h2>
+        <h2>Loading{{ site.baseurl }}.</h2>
     </div>
 
     <!-- Load JavaScript Files -->
-    <script src="media/setupScene.js"></script>
-    <script src="media/elements/loadModel.js"></script>
+    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
+    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
 
-<!-- MODEL HS27.0 -->
+<!-- MODEL HS13.1 -->
 
-<h3>Model SW27.0</h3>
+<h3>Model SW13.1</h3>
 <script>
     // Ensure `timeSteps` is available globally
-    window.modelFile = "media/elements/hs27_arrow.gltf";
+    window.modelFile = "{{ site.baseurl }}/media/elements/hs131_arrow.gltf";
 </script>
 
 <!-- Define the container -->
 <div class="threejs-container">
-    <div id="threejs-canvas" , tag="hs27"></div>
+    <div id="threejs-canvas" , tag="hs131"></div>
 
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
@@ -190,25 +192,25 @@ Densities of the 4% most massive part for each element and model in this class
             color: black;
         "
     >
-        <h2>Loading...</h2>
+        <h2>Loading{{ site.baseurl }}.</h2>
     </div>
 
     <!-- Load JavaScript Files -->
-    <script src="media/setupScene.js"></script>
-    <script src="media/elements/loadModel.js"></script>
+    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
+    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
 
-<!-- MODEL HS27.3 -->
+<!-- MODEL HS14.2 -->
 
-<h3>Model SW27.3</h3>
+<h3>Model SW14.2</h3>
 <script>
     // Ensure `timeSteps` is available globally
-    window.modelFile = "media/elements/hs273_arrow.gltf";
+    window.modelFile = "{{ site.baseurl }}/media/elements/hs142_arrow.gltf";
 </script>
 
 <!-- Define the container -->
 <div class="threejs-container">
-    <div id="threejs-canvas" , tag="hs273"></div>
+    <div id="threejs-canvas" , tag="hs142"></div>
 
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
@@ -265,10 +267,10 @@ Densities of the 4% most massive part for each element and model in this class
             color: black;
         "
     >
-        <h2>Loading...</h2>
+        <h2>Loading{{ site.baseurl }}.</h2>
     </div>
 
     <!-- Load JavaScript Files -->
-    <script src="media/setupScene.js"></script>
-    <script src="media/elements/loadModel.js"></script>
+    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
+    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
