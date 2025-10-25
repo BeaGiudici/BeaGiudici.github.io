@@ -1,0 +1,91 @@
+---
+layout: default
+title: Docker
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/public/main.css">
+
+<h1>Docker</h1>
+
+<p>
+  <a href="https://www.docker.com/" target="_blank">Docker</a> is a virtualization products used to deliver software in packages called <i>containers</i>. 
+  It is used to deliver packages in lightweight containers so that applications can work efficiently in different environments in isolation.
+</p>
+
+<h2>Installation</h2>
+
+<p>
+  The first step is to add the Docker repository so that it is updated automatically.
+</p>
+
+<p>
+  First, add Docker's official GPG key:
+</p>
+
+<pre>
+  <code>
+  sudo apt update
+  sudo apt install ca-certificates curl
+  sudo install -m 0755 -d /etc/apt/keyrings
+  sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  </code>
+</pre>
+
+<p>
+  After that, add the repository to apt sources:
+</p>
+
+<pre>
+  <code>
+  echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt update
+  </code>
+</pre>
+
+<p>
+  After that, it is possible to install all the necessary packages.
+</p>
+
+<pre>
+  <code>
+  sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  </code>
+</pre>
+
+<p>
+  To check that the installation went well and everything is running smoothly, run
+</p>
+
+<pre>
+  <code>
+  sudo docker run hello-world
+  </code>
+</pre>
+
+<h2>Cheatsheet</h2>
+
+<p>
+  In the following, I will give some quick commands to use:
+</p>
+
+<ul>
+  <li>
+    Run a Docker compose image (to be run in the same directory where the Docker image is stored): <code>sudo docker compose up -d</code>
+  </li>
+  <li>
+    Stop a running container: <code>docker compose stop NAME-OF-THE-CONTAINER</code>
+  </li>
+  <li>
+    Prune any stopped containers to avoid cache conflicts: <code>docker system prune -f</code>
+  </li>
+  <li>
+    See running containers: <code>docker ps</code>
+  </li>
+  <li>
+    Execute a command in a particular container: <code>docker exec -it NAME-OF-THE-CONTAINER COMMAND</code>
+  </li>
+</ul>
