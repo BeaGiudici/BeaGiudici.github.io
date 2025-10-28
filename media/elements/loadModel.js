@@ -17,11 +17,11 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
         const model = gltf.scene; // The loaded GLTF scene
         scene.add(model); // Add the model to the scene
         const elementSettings = {
-          mesh0: { opacity: 1.0, transparent: false, depthWrite: true },
-          mesh1: { opacity: 1.0, transparent: false, depthWrite: true },
-          mesh2: { opacity: 0.5, transparent: true, depthWrite: false },
-          mesh3: { opacity: 1.0, transparent: false, depthWrite: true },
-          mesh4: { opacity: 1.0, transparent: false, depthWrite: true },
+          mesh0: { opacity: 0.6, transparent: false, depthWrite: true },
+          mesh1: { opacity: 0.6, transparent: false, depthWrite: true },
+          mesh2: { opacity: 0.6, transparent: true, depthWrite: false },
+          mesh3: { opacity: 0.6, transparent: false, depthWrite: true },
+          mesh4: { opacity: 0.6, transparent: false, depthWrite: true },
         };
 
         model.traverse((node) => {
