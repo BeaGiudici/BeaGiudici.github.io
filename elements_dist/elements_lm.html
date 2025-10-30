@@ -53,14 +53,10 @@ Densities of the 4% most massive part for each element and model in this class
 <!-- MODEL WH12.5 -->
 
 <h3>Model WH12.5</h3>
-<script>
-    // Ensure `timeSteps` is available globally
-    window.modelFile = "{{ site.baseurl }}/media/elements/w125.gltf";
-</script>
-
-<!-- Define the container -->
-<div class="threejs-container">
-    <div id="threejs-canvas" , tag="w125"></div>
+<div
+  class="threejs-container"
+  data-model-file="{{ site.baseurl }}/media/elements/w125.gltf"
+>
 
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
@@ -120,23 +116,16 @@ Densities of the 4% most massive part for each element and model in this class
         <h2>Loading{{ site.baseurl }}.</h2>
     </div>
 
-    <!-- Load JavaScript Files -->
-    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
-    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
 
 <!-- MODEL HS13.1 -->
 
 <h3>Model SW13.1</h3>
-<script>
-    // Ensure `timeSteps` is available globally
-    window.modelFile = "{{ site.baseurl }}/media/elements/hs131.gltf";
-</script>
-
-<!-- Define the container -->
-<div class="threejs-container">
-    <div id="threejs-canvas" , tag="hs131"></div>
-
+<div
+  class="threejs-container"
+  data-model-file="{{ site.baseurl }}/media/elements/hs131.gltf"
+>
+  <div class="threejs-canvas"></div>
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
         <button
@@ -195,22 +184,16 @@ Densities of the 4% most massive part for each element and model in this class
         <h2>Loading{{ site.baseurl }}.</h2>
     </div>
 
-    <!-- Load JavaScript Files -->
-    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
-    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
 
 <!-- MODEL HS14.2 -->
 
 <h3>Model SW14.2</h3>
-<script>
-    // Ensure `timeSteps` is available globally
-    window.modelFile = "{{ site.baseurl }}/media/elements/hs142.gltf";
-</script>
-
-<!-- Define the container -->
-<div class="threejs-container">
-    <div id="threejs-canvas" , tag="hs142"></div>
+<div
+  class="threejs-container"
+  data-model-file="{{ site.baseurl }}/media/elements/hs142.gltf"
+>
+  <div class="threejs-canvas"></div>
 
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
@@ -270,7 +253,8 @@ Densities of the 4% most massive part for each element and model in this class
         <h2>Loading{{ site.baseurl }}.</h2>
     </div>
 
-    <!-- Load JavaScript Files -->
-    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
-    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
+
+<!-- Load JavaScript once -->
+<script src="{{ site.baseurl }}/media/setupScene.js"></script>
+<script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>

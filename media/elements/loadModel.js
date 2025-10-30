@@ -2,10 +2,16 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
   const loader = new THREE.GLTFLoader();
   const meshes = {};
   const scene = container.scene;
+  const modelFilename = container.dataset.modelFile;
 
   // Show loading text initially
   const loadingText = container.querySelector("#loading-text");
   loadingText.style.display = "block"; // Ensure the text is visible before loading starts
+
+  if (!modelFile) {
+    console.error("Missing data-model-file for container:", container);
+    return;
+  }
 
   // Function to load model
   function loadModel(modelFilename) {

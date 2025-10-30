@@ -1,4 +1,8 @@
 document.querySelectorAll(".threejs-container").forEach((container) => {
+  // Prevent double initialization
+  if (container.dataset.initialized) return;
+  container.dataset.initialized = true;
+  
   // Get the correct canvas
   const canvas = container.querySelector("#threejs-canvas");
 
