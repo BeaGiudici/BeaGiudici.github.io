@@ -2,7 +2,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
   const loader = new THREE.GLTFLoader();
   const meshes = {};
   const scene = container.scene;
-  const modelFilename = container.dataset.modelFile;
+  const modelFile = container.dataset.modelFile;
 
   // Show loading text initially
   const loadingText = container.querySelector("#loading-text");
@@ -12,6 +12,11 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
     console.error("Missing data-model-file for container:", container);
     return;
   }
+  else {
+    console.log(modelFile)
+  }
+
+  
 
   // Function to load model
   function loadModel(modelFilename) {
@@ -67,7 +72,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
     );
   }
 
-  loadModel(window.modelFile);
+  loadModel(modelFile);
 
   // Add interactive legend
   // Add event listeners for toggle buttons

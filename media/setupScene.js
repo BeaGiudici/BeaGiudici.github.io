@@ -4,13 +4,17 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
   container.dataset.initialized = true;
   
   // Get the correct canvas
-  const canvas = container.querySelector("#threejs-canvas");
+  const canvas = container.querySelector(".threejs-canvas");
 
   // Set up basic Three.js Scene
   const scene = new THREE.Scene();
+
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+
   const camera = new THREE.PerspectiveCamera(
     75,
-    canvas.clientWidth / canvas.clientHeight,
+    width / height,
     0.1,
     100,
   );
@@ -19,7 +23,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
   const renderer = new THREE.WebGLRenderer({ antialias: true });
 
   // Ensure renderer is inside the canvas
-  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+  renderer.setSize(width, height);
   canvas.appendChild(renderer.domElement);
 
   // Initialize OrbitControls (allows for dragging, rotating, and zooming)
@@ -50,6 +54,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
     renderer.render(scene, camera);
   }
   animate();
+  
 
   // Scene background color
   scene.background = new THREE.Color(0xf1f1f1); // Set background to creme
@@ -69,6 +74,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
   if (blackBtn && whiteBtn) {
     console.log("getting buttons");
     blackBtn.addEventListener("click", () => {
+      console.log('Dark background')
       scene.background = new THREE.Color(0x333333);
       const labels = labelContainer.querySelectorAll("span");
       labels.forEach((label) => {
@@ -77,6 +83,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
     });
 
     whiteBtn.addEventListener("click", () => {
+      console.log('Light background')
       scene.background = new THREE.Color(0xf1f1f1);
       const labels = labelContainer.querySelectorAll("span");
       labels.forEach((label) => {
@@ -107,10 +114,11 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
 
   // Handle window resizing (maintain rendering size on resize)
   window.addEventListener("resize", () => {
-    const width = container.querySelector("#threejs-canvas").clientWidth;
-    const height = container.querySelector("#threejs-canvas").clientHeight;
+    const width = container.querySelector(".threejs-canvas").clientWidth;
+    const height = container.querySelector(".threejs-canvas").clientHeight;
     renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
   });
 });
+

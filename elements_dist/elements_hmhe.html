@@ -53,14 +53,11 @@ Densities of the 4% most massive part for each element and model in this class
 <!-- MODEL HS19.8 -->
 
 <h3>Model SW19.8</h3>
-<script>
-    // Ensure `timeSteps` is available globally
-    window.modelFile = "{{ site.baseurl }}/media/elements/hs198.gltf";
-</script>
-
-<!-- Define the container -->
-<div class="threejs-container">
-    <div id="threejs-canvas" , tag="hs198"></div>
+<div
+  class="threejs-container"
+  data-model-file="{{ site.baseurl }}/media/elements/hs198.gltf"
+>
+  <div class="threejs-canvas"></div>
 
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
@@ -117,25 +114,19 @@ Densities of the 4% most massive part for each element and model in this class
             color: black;
         "
     >
-        <h2>Loading{{ site.baseurl }}.</h2>
+        <h2>Loading...</h2>
     </div>
 
-    <!-- Load JavaScript Files -->
-    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
-    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
 
 <!-- MODEL HS25.5 -->
 
 <h3>Model SW25.5</h3>
-<script>
-    // Ensure `timeSteps` is available globally
-    window.modelFile = "{{ site.baseurl }}/media/elements/hs255.gltf";
-</script>
-
-<!-- Define the container -->
-<div class="threejs-container">
-    <div id="threejs-canvas" , tag="hs255"></div>
+<div
+  class="threejs-container"
+  data-model-file="{{ site.baseurl }}/media/elements/hs255.gltf"
+>
+  <div class="threejs-canvas"></div>
 
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
@@ -192,25 +183,19 @@ Densities of the 4% most massive part for each element and model in this class
             color: black;
         "
     >
-        <h2>Loading{{ site.baseurl }}.</h2>
+        <h2>Loading...</h2>
     </div>
 
-    <!-- Load JavaScript Files -->
-    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
-    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
 
 <!-- MODEL HS25.6 -->
 
 <h3>Model SW25.6</h3>
-<script>
-    // Ensure `timeSteps` is available globally
-    window.modelFile = "{{ site.baseurl }}/media/elements/hs256.gltf";
-</script>
-
-<!-- Define the container -->
-<div class="threejs-container">
-    <div id="threejs-canvas" , tag="hs256"></div>
+<div
+  class="threejs-container"
+  data-model-file="{{ site.baseurl }}/media/elements/hs256.gltf"
+>
+  <div class="threejs-canvas"></div>
 
     <div id="legend" style="position: absolute; top: 10px; left: 20px">
         <!-- <button class="element-button" id="toggle_mesh0" style="background-color: yellow;">He4</button>-->
@@ -267,10 +252,11 @@ Densities of the 4% most massive part for each element and model in this class
             color: black;
         "
     >
-        <h2>Loading{{ site.baseurl }}.</h2>
+        <h2>Loading...</h2>
     </div>
 
-    <!-- Load JavaScript Files -->
-    <script src="{{ site.baseurl }}/media/setupScene.js"></script>
-    <script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
 </div>
+
+<!-- Load JavaScript Files -->
+<script src="{{ site.baseurl }}/media/setupScene.js"></script>
+<script src="{{ site.baseurl }}/media/elements/loadModel.js"></script>
