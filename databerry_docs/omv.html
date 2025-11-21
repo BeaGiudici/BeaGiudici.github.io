@@ -1,0 +1,108 @@
+---
+layout: default
+title: OpenMediaVault
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/public/main.css">
+
+<h1>Open Media Vault</h1>
+
+<p>
+  <i>
+    <b>Important notes:</b> 
+    <ul>
+      <li>Up to now, only Debian 11 (Bullseye) and 12 (Bookworm) are supported with OMV. Newest versions (>= 13, Trixie) cause problems.</li>
+      <li>If you want to enable NFS later, check that the filesystem type is EXT4!</li>
+    </ul>
+  </i>
+</p>
+
+<p>
+  <a href="https://www.openmediavault.org/">OpenMediaVault</a> (OMV) is a free free Linux distribution used for network-attached storage (NAS) systems.
+  Personally, I followed an amazing YouTube video by NetworkChuck (foud it <a href="https://youtu.be/gyMpI8csWis?si=rljsHauA_YlMxeJQ" target="_blank">here</a>). 
+  In the following I will also provide a written step-by-step guide.
+</p>
+
+<h2>Installation</h2>
+
+Installing OMV is really simple: open a shell and run the command below.
+
+<pre>
+  <code>
+  sudo wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
+  </code>
+</pre>
+
+This is going to take a while to complete, as it download and execute the installation script.
+
+<h2>Setup</h2>
+
+<p>
+  In order to set up everything, we refer to the web GUI. If you type the ip address of your Pi in the top bar of any browser, you'll be redirected to the login page for OMV.
+  At the first login you have to use the default credential:
+  <ul>
+    <li>User: admin</li>
+    <li>Password: openmediavault</li>
+  </ul>
+  I suggest, as the first thing, to change the password (the user admin will always be the <code>root</code> user).
+</p>
+
+<p>
+  Let's connect now our external hard drive, where all the data will be stored. In order to see if OMV can detect it: under <b>Storage</b> click on <b>Disks</b>
+</p>
+
+<img src="{{ site.baseurl }}/media/databerry/img1.png"></img>
+
+<p>
+  and in the table there should be the SSD, like <code>/dev/sda</code> (together with the SD card memory where the OS is installed).
+</p>
+
+<img src="{{ site.baseurl }}/media/databerry/img2.png"></img>
+
+<p>
+  Now you are sure that the storage is seen, and we can mount it. In order to do so, let's click on <b>Storage</b> again, and then <b>File System</b>.
+</p>
+
+<img src="{{ site.baseurl }}/media/databerry/img3.png"></img>
+
+<p>
+  In the next window, click on the small triangle on the top of the page, to mount an existing file system (you can also create one clicking on the + symbol).
+</p>
+
+<img src="{{ site.baseurl }}/media/databerry/img4.png"></img>
+
+<p>
+   In order to be able to access the content of our file system, you should now create a shared folder. 
+   Simply click on <b>Shared Folders</b> under the <b>Storage</b> menu and follow the steps.
+</p>
+
+<h2>Sharing folders with other machines</h2>
+
+<p>
+  In order to be able to see the folders on other machines, services like SMB or NFS should be enabled. Let's see how to do it. 
+</p>
+
+<h3>Enabling SMB (Windows)</h3>
+
+<p>
+  SMB is the default file sharing system for Windows.
+Click on <b>Services</b> and then <b>SMB/CIFS</b>. Once in the <b>Settings</b> just tick the "Enable" flag.
+That's it, it's really that simple!
+(Just remember to click on Save at the bottom of the page...)
+</p>
+
+<p>
+  After that, click on <b>Shares</b> and add the shared folder created before.
+</p>
+
+<h3>Enable NFS (Linux / MacOS)</h3>
+
+<p>
+  NFS is used by Linux and Mac OS systems. Again, click on <b>Services</b> and then <b>NFS</b>. Under <b>Settings</b> tick the "Enable" flag.
+</p>
+
+<p>
+  Again, click then on <b>Shares</b> and add the shared folder. 
+  This time we need an additional passage, because <i>Client</i> is a mandatory field. 
+  I usually put the IP addresses of the devices connected to the same WiFi (or LAN), but feel free to set it as preferred.
+</p>

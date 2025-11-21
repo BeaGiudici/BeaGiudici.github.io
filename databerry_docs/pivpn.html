@@ -1,0 +1,199 @@
+---
+layout: default
+title: PiVPN
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/public/main.css">
+
+<h1>PiVPN</h1>
+
+<p>
+  <a href="https://www.pivpn.io/" target="_blank">PiVPN</a> is a package that enables a Raspberry Pi to work as a VPN server, 
+  using two free open-source protocols: WireGuard or OpenVPN.
+</p>
+
+<h2>Installation and Setup</h2>
+
+<p>
+  In order to download and start the installation of PiVPN, run
+  <pre>
+    <code>
+    curl -L https://install.pivpn.io | bash
+    </code>
+  </pre>
+</p>
+
+<p>
+  The guided installation will start right away.
+  When asked for the VPN provider, choose <b>WireGuard</b>.
+  During the process, it will ask to select a static IP: I chose the one set by the router.
+  After that, choose the forward VPN port on the router, or stay with the default port 51820.
+  Finally, when asked for a DNS provider, choose "Custom" and enter the Raspberry Pi IP.
+</p>
+
+Before start using it, remember to start the systemd service with
+<pre>
+  <code>
+  sudo systemctl start wg-quick@wg0
+  sudo systemctl enable wg-quick@wg0
+  </code>
+</pre>
+
+<h2>Usage</h2>
+
+<p>
+  In the following I will give a small overview on how to use PiVPN.
+</p>
+
+<p>
+  A profile can be added running
+</p>
+
+<pre>
+  <code>
+  pivpn add -n PROFILE-NAME
+  </code>
+</pre>
+
+<p>
+  on the Raspberry Pi. Once a profile for a new device is added, it has to be transferred to said device.
+</p>
+
+<h3>Phone</h3>
+
+<p>
+  Download the <a href="https://play.google.com/store/apps/details?id=com.wireguard.android">WireGuard App</a>, 
+  and scan the QR code of the respective profile, generated with
+</p>
+
+<pre>
+  <code>
+  pivpn -qr
+  </code>
+</pre>
+
+<h3>PC</h3>
+
+<p>
+  On a PC, install WireGuard with
+</p>
+
+<pre>
+  <code>
+  sudo apt install wireguard
+  </code>
+</pre>
+
+<p>
+  Once that's done, copy the config file generated on the server to <code>/etc/wireguard/</code> (root privileges needed to work on that directory).
+</p>
+
+<p>
+  In order to connect to the VPN, run
+</p>
+
+<pre>
+  <code>
+  sudo wg-quick up PROFILE-NAME
+  </code>
+</pre>
+
+<p>
+  Once you run this command you are securely connected to your home network over VPN. 
+  This means that you can ssh to databerry!
+</p>
+
+<p>
+  You can disconnect with
+</p>
+
+<pre>
+  <code>
+  sudo wg-quick down PROFILE-NAME
+  </code>
+</pre>
+
+<p>
+  <b>Pro-tip</b>: If you want to make VPN connection automatic at boot or login add <code>wg-quick up PROFILE-NAME</code> to
+  <code>.bashrc</code>, <code>.profle</code> or a systemd service.
+</p>
+
+<h4>Auto-mount of remote folder</h4>
+
+<p>
+  It is possible to change the configuration file in order to automatically mount some directory when you connect to the VPN. 
+  In the file <code>/etc/woreguard/PROFILE-NAME.conf</code> add
+</p>
+
+<pre>
+  <code>
+  PostUp = sudo -u username bash -c 'mkdir -p /mnt/pi && sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/home/YOU/.ssh/id_rsa,uid=1000,gid=1000,umask=022 user@ip_address:/dir/to/mount /mnt/pi'  
+  PostDown = fusermount -u /mnt/pi
+  </code>
+</pre>
+
+<p>
+  This will tell to create, if it not present already, and mount (unmount) the directory when the VPN is turned on (off).
+</p>
+
+<h2>Troubleshooting</h2>
+
+<p>
+  Having connection problems is really common. In order to understand what's going on, the debug command is very useful:
+</p>
+
+<pre>
+  <code>
+  pivpn -d
+  </code>
+</pre>
+
+<p>
+  It can happen that the router does not forward the correct port. In this case, go to your router page (usually by just putting the IP address in the research bar); 
+  at this point goes under the configuration for NAT/PAT and add here the port you want to open. A summary example can be like
+</p>
+
+<table>
+  <tr>
+    <th>Field</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>
+      Service Name
+    </td>
+    <td>WireGuardVPN</td>
+  </tr>
+  <tr>
+    <td>
+      Device IPv4
+    </td>
+    <td>
+      Your IP address
+    </td>
+  </tr>
+  <tr>
+    <td>
+      External port
+    </td>
+    <td>
+      the needed port
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Internal port
+    </td>
+    <td>
+      the same as before
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Protocol
+    </td>
+    <td>
+      UDP
+    </td>
+  </tr>
+</table>

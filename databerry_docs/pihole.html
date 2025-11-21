@@ -1,0 +1,130 @@
+---
+layout: default
+title: Pi-hole
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/public/main.css">
+
+<h1>Pi-hole</h1>
+
+<p>
+  <a href="https://pi-hole.net/" target="_blank">Pi-hole</a> is a Linux application used to block adds and user tracking on a local net.
+  It can also act as a DNS sinkhole and a DHPC server.
+</p>
+
+<h2>Installation</h2>
+
+<p>
+  I opted for running Pi-hole in a Docker container. The image I used is
+</p>
+
+<pre>
+  <code>
+  # More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      # DNS Ports
+      - "53:53/tcp"
+      - "53:53/udp"
+      # Default HTTP Port
+      - "80:80/tcp"
+      # Default HTTPs Port. FTL will generate a self-signed certificate
+      - "443:443/tcp"
+      # Uncomment the line below if you are using Pi-hole as your DHCP server
+      #- "67:67/udp"
+      # Uncomment the line below if you are using Pi-hole as your NTP server
+      #- "123:123/udp"
+    environment:
+      # Set the appropriate timezone for your location (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), e.g:
+      TZ: 'Europe/London'
+      # Set a password to access the web interface. Not setting one will result in a random password being assigned
+      FTLCONF_webserver_api_password: 'SET-YOUR-PASSWORD-HERE'
+      # If using Docker's default `bridge` network setting the dns listening mode should be set to 'all'
+      FTLCONF_dns_listeningMode: 'all'
+    # Volumes store your data between container upgrades
+    volumes:
+      # For persisting Pi-hole's databases and common configuration file
+      - './etc-pihole:/etc/pihole'
+      # Uncomment the below if you have custom dnsmasq config files that you want to persist. Not needed for most starting fresh with Pi-hole v6. If you're upgrading from v5 you and have used this directory before, you should keep it enabled for the first v6 container start to allow for a complete migration. It can be removed afterwards. Needs environment variable FTLCONF_misc_etc_dnsmasq_d: 'true'
+      #- './etc-dnsmasq.d:/etc/dnsmasq.d'
+    cap_add:
+      # See https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+      # Required if you are using Pi-hole as your DHCP server, else not needed
+      - NET_ADMIN
+      # Required if you are using Pi-hole as your NTP client to be able to set the host's system time
+      - SYS_TIME
+      # Optional, if Pi-hole should get some more processing time
+      - SYS_NICE
+    restart: unless-stopped
+  </code>
+</pre>
+
+<p>
+  Write this to a <code>docker-compose.yaml</code> file and store it in a folder. Run <code>sudo docker compose up -d</code>.
+</p>
+
+<p>
+  Be careful that other services might be using the port you are setting. In particular, I had problems with:
+  <ul>
+    <li>
+      Port 53: this port is usually used by <code>systemd-resolved</code>. You can disable it by
+      <pre>
+        <code>
+        sudo systemctl disable systemd-resolved
+        sudo systemctl stop systemd-resolved
+        </code>
+      </pre>
+      <p>
+        After this, remove the file <code>/etc/resolv.conf</code> and create a new one writing in it <code>nameserver 1.1.1.1</code>.
+      </p>
+      <p>
+        This is actually better than modifying the port in the yaml file, since the clients will use port 53 by default, so it is better to reserve it for pihole.
+      </p>
+    </li>
+    <li>
+      Port 80: edit the <code>docker-compose.yaml</code> file, changing the port 80:80 to 8080:80.
+    </li>
+  </ul>
+</p>
+
+<p>
+  When everything is set up, you can connect to the web GUI with <code>http://YOUR-PI-IP:8080/admin</code>, using the password you set in the image,
+  at <code>FTLCONF_webserver_api_password</code> (line 22 in the code above).
+</p>
+
+<h2>Web Interface</h2>
+
+<p>
+  You can connect to the web interface using <code>http://YOUR-PI-IP:8080/admin</code>. This will allow you to change the options of pi-hole in a nice GUI environment.
+</p>
+
+<p>
+  It is useful to set up a DNS, so that we can connect to databerry using a hostname, without memorizing its IP address. 
+  In order to do so, go to Settings -> Local DNS Records. 
+  Here, you can add the domain and its IP address. 
+  Usually, most systems (especially systemd-resolved) are fussy about "bare" hostnames unless they are defined in <code>/etc/hosts</code>, 
+  or the system is set to search domain suffixes (like .local, .net, etc.).
+  I am not a fan of modifying <code>/etc/hosts</code>, so I opted for setting a suffix. 
+  It is possible to set a common domain name in Pi-hole, just go under Settings -> DNS -> DNS domain settings. 
+  Here, you can set a Pi-hole domain name. Flag the "Expand hostnames" option to automatically expand the hostnames. 
+  Moreover, add the DNS to the list of known DNS records. For example add databerry.local with its IP address.
+</p>
+
+<h2>Blocked lists</h2>
+
+<p>
+  Pi-hole is very useful in blocking ads on website. 
+  In order to add a list of ads to block, simply go to Lists and add a new one. 
+  The ones I have up to now are:
+  <ul>
+    <li>
+      <a href="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts" target="_blank">https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts</a>
+    </li>
+    <li>
+      <a href="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt" target="_blank">https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt</a>
+    </li>
+  </ul>
+</p>
