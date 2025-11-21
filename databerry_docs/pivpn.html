@@ -125,15 +125,86 @@ Before start using it, remember to start the systemd service with
   In the file <code>/etc/woreguard/PROFILE-NAME.conf</code> add
 </p>
 
+<p>
+  First, it can be useful to wrap the commands in a bash script <code>/usr/local/bin/mount_pi.sh</code>
+</p>
+
 <pre>
   <code>
-  PostUp = sudo -u username bash -c 'mkdir -p /mnt/pi && sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/home/YOU/.ssh/id_rsa,uid=1000,gid=1000,umask=022 user@ip_address:/dir/to/mount /mnt/pi'  
+    mkdir -p /mnt/pi 
+    sudo -u user sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=/home/YOU/.ssh/id_rsa,uid=1000,gid=1000,umask=022 user@ip_address:/dir/to/mount /mnt/pi  
+  </code>
+</pre>
+
+<p>
+  Then, modify the configuation file, adding the following command under the <code>[Interface]</code> options
+</p>
+
+<pre>
+  <code>
+  PostUp = /usr/local/bin/mount-pi.sh
   PostDown = fusermount -u /mnt/pi
   </code>
 </pre>
 
 <p>
   This will tell to create, if it not present already, and mount (unmount) the directory when the VPN is turned on (off).
+</p>
+
+<h4>VPN GUI</h4>
+
+<p>
+  It is advisable (mostly because I'm lazy) to add the possibility to turn on and off the VPN from the NetworkManager GUI. 
+  Let's see how to do it in Kubuntu.
+</p>
+
+<p>
+  Doing this is very simple. Open a terminal and type
+</p>
+
+<pre>
+  <code>
+    nmcli connection import type wireguard file /path/to/your.conf
+  </code>
+</pre>
+
+<p>
+  where <code>/path/to/your.conf</code> is where the configuration file is stored.
+  After importing, the connection should appear in Network Settings / Plasma’s network widget.
+</p>
+
+<p>
+  NetworkManager can run scripts on “connection up/down”.
+  So let's write a simple script to be executed whenever the VPN is activated (deactivated) to automatically mount (unmount) the remote folder.
+</p>
+
+<p>
+  Create <code>/etc/NetworkManager/dispatcher.d/99-mount-naspi</code>
+</p>
+
+<pre>
+  <code>
+    #!/bin/bash
+
+    IFACE="$1"
+    STATE="$2"
+
+    if [ "$IFACE" = "conf_name" ] && [ "$STATE" = "up" ]; then
+        sudo -u user /usr/local/bin/mount_pi.sh
+    fi
+
+    if [ "$IFACE" = "conf_name" ] && [ "$STATE" = "down" ]; then
+        fusermount -u /mnt/naspi
+    fi
+  </code>
+</pre>
+
+<p>
+  <b>Note</b>: To find the configuration name the command is <code>nmcli connection show | grep wireguard</code>.
+</p>
+
+<p>
+  Then give them executing permission with <code>sudo chmod +x /etc/NetworkManager/dispatcher.d/99-mount-naspi</code>.
 </p>
 
 <h2>Troubleshooting</h2>
