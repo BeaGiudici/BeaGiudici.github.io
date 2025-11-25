@@ -1,5 +1,6 @@
 document.querySelectorAll(".threejs-container").forEach((container) => {
   const loader = new THREE.GLTFLoader();
+  const modelKey = container.dataset.model;
   const timeSteps = JSON.parse(container.dataset.timesteps); // Read time steps from data attribute
   if (!timeSteps || timeSteps.length === 0) {
     console.error(`No timeSteps found for model ${modelKey}`);
@@ -19,14 +20,12 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
   const labelContainer = container.querySelector("#slider-labels");
   slider.max = timeSteps.length - 1;
 
-  const modelKey = container.dataset.modelKey;
-
   // Show loading text initially
   const loadingText = container.querySelector("#loading-text");
   loadingText.style.display = "block"; // Ensure the text is visible before loading starts
 
   // Load time labels from JSON based on model
-  fetch("../media/shocks/times.json")
+  fetch("../media/shocks/settings.json")
     .then((response) => response.json())
     .then((data) => {
       if (!data[modelKey] || !data[modelKey].times) {
@@ -116,7 +115,7 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
         const elementSettings = {
           mesh0: { opacity: 1.0, transparent: false, depthWrite: true },
           mesh1: { opacity: 0.3, transparent: true, depthWrite: false },
-          mesh2: { opacity: 0.4, transparent: true, depthWrite: false },
+          //mesh2: { opacity: 0.4, transparent: true, depthWrite: false },
         };
 
         // Create a PerspectiveCamera
@@ -134,25 +133,18 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
         camera.lookAt(0, 0, 0);
 
         // Scale and position adjustments
-        if (index == 0) {
-          currentModel.scale.set(5e-9, 5e-9, 5e-9);
-        } else if (index == 1) {
-          currentModel.scale.set(3e-9, 3e-9, 3e-9);
-        } else if (index == 2) {
-          currentModel.scale.set(1e-10, 1e-10, 1e-10);
-        } else if (index == 3) {
-          currentModel.scale.set(2.5e-13, 2.5e-13, 2.5e-13);
-        } else if (index == 4) {
-          currentModel.scale.set(2e-13, 2e-13, 2e-13);
-        } else if (index == 5) {
-          currentModel.scale.set(2e-14, 2e-14, 2e-14);
-        } else if (index == 6) {
-          currentModel.scale.set(2e-15, 2e-15, 2e-15);
-        } else {
-          currentModel.scale.set(7e-16, 7e-16, 7e-16);
-        }
-        //currentModel.position.set(-1, -1, -1);
-
+        fetch("../media/shocks/settings.json")
+          .then((response) => response.json())
+          .then((data) => {
+            if (!data[modelKey] || !data[modelKey].scale) {
+              console.error(`No scale found for model: ${modelKey}`);
+              return;
+            }
+            const s = data[modelKey].scale;
+            currentModel.scale.set(s[index][0], s[index][1], s[index][2]);
+            //currentModel.position.set(-1, -1, -1);
+        })
+        
         // Handle mesh properties
         currentModel.traverse((node) => {
           //console.log("Node:", node.name);
@@ -162,11 +154,11 @@ document.querySelectorAll(".threejs-container").forEach((container) => {
               meshes[node.name] = node;
 
               // Apply initial material settings
-              node.material.transparent =
-                elementSettings[node.name].transparent;
-              node.material.opacity = elementSettings[node.name].opacity;
-              node.material.needsUpdate = true;
-              node.material.depthWrite = elementSettings[node.name].depthWrite; // Prevent depth writing for shocks
+            node.material.transparent = elementSettings[node.name].transparent;
+            node.material.opacity = elementSettings[node.name].opacity;
+            node.material.needsUpdate = false;
+            node.material.side = THREE.DoubleSide;
+            node.material.depthWrite = elementSettings[node.name].depthWrite; // Prevent depth writing
 
               // Use alphaMap if applicable
               if (node.material.map) {
