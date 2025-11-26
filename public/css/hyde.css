@@ -256,7 +256,9 @@ a.sidebar-nav-item:focus {
 /* buttons */
 
 .shock-button {
-    margin: 5px;
+    position: absolute;
+    bottom: 4%;           /* distance from bottom of canvas */
+    left: 4%;            /* center horizontally */
     color: black;
     width: 120px;
     height: 60px;
@@ -311,8 +313,9 @@ a.sidebar-nav-item:focus {
 
 .slider-container {
     position: absolute;
-    bottom: 10%;
-    left: 10%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Increase the width and height of the slider */
@@ -323,7 +326,7 @@ a.sidebar-nav-item:focus {
     background: #ccc; /* Track color */
     border-radius: 5px;
     outline: none;
-    width: 620px;
+    width: 550px;
     transition: background 0.3s;
 }
 
