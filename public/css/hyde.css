@@ -335,7 +335,7 @@ a.sidebar-nav-item:focus {
     appearance: none;
     width: 20px; /* Make it bigger */
     height: 20px;
-    background: #007bff; /* Blue handle */
+    background: #1d3557; /* Blue handle */
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.3s;
