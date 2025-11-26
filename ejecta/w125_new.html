@@ -16,10 +16,9 @@ title: Model WH12.5
 <h2>Model WH12.5</h2>
 
 <!-- Define the container -->
- <!--
 <div
     class="threejs-container"
-    data-model-key="W12_5"
+    data-model="w12_5"
     data-timesteps='["{{ site.baseurl }}/media/shocks/w12_5_00.gltf", 
                      "{{ site.baseurl }}/media/shocks/w12_5_01.gltf", 
                      "{{ site.baseurl }}/media/shocks/w12_5_02.gltf", 
@@ -28,11 +27,6 @@ title: Model WH12.5
                      "{{ site.baseurl }}/media/shocks/w12_5_05.gltf", 
                      "{{ site.baseurl }}/media/shocks/w12_5_06.gltf", 
                      "{{ site.baseurl }}/media/shocks/w12_5_07.gltf"]'
-> -->
-<div
-    class="threejs-container"
-    data-model="w12_5"
-    data-timesteps='["{{ site.baseurl }}/media/shocks/w12_5_04.gltf"]'
 >
     <div class="threejs-canvas"></div>
 
@@ -49,21 +43,20 @@ title: Model WH12.5
         <div id="slider-labels"></div>
     </div>
 
-    <div id="legend">
         <button
             class="shock-button"
             id="toggle_mesh1"
-            style="background-color: red"
+            style="background-color: cyan"
         >
             Forward shock
         </button>
-    </div>
 
     <div id="container">
         <button
             class="background-button"
             id="whiteb"
-            style="border: 1px solid #333; background-color: #f1f1f1"
+            style="border: 1px solid #333; 
+                   background-color: #f1f1f1;"
         ></button>
         <button
             class="background-button"
