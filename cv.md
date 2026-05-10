@@ -99,11 +99,13 @@ Grade: 100/100
 
 ## Publications
 
-1. **B. Giudici**, M. Gabler, H.-T. Janka, *Hydrodynamic instabilities in long-term three-dimensional simulations of neutrino-driven supernovae of 13 red supergiant progenitors*, Preprint, [arXiv:2511.11796](https://arxiv.org/abs/2511.11796){:target="_blank"}.
+1. R. Wesson, M. Gabler, M. Lyons, J. Wildman, M. Matsuura, H.-T. Janka, **B. Giudici**, P. Cigan, H. L. Gomez, R. Indebetouw, A. M. S. Richards, A. Wongwathanarat, *3D insights into SN 1987A: ALMA observations compared to hydrodynamical explosion simulations*, Monthly Notices of the Royal Astronomical Society, vol. 548 no. 2, May 2026, **DOI** [10.1093/mnras/stag325]{https://doi.org/10.1093/mnras/stag325}{:target="_blank"}.
 
-2. S. Orlando, M. Miceli, M. Ono, S. Nagataki, M.-A. Aloy, F. Bocchino, M. Gabler, **B. Giudici**, R. Giuffrida, E. Greco, G. La Malfa, S.-H. Lee, M. Obergaulinger, O. Petruk, V. Sapienza, S. Ustamujic, J. Weng, *Tracing the ejecta structure of SN 1987A: Insights and diagnostics from 3D MHD simulations*, Astronomy & Astrophysics, vol. 699 no. A305, Jul. 2025, **DOI** [10.1051/0004-6361/202554862](https://doi.org/10.1051/0004-6361/202554862){:target="_blank"}.
+2. **B. Giudici**, M. Gabler, H.-T. Janka, *Hydrodynamic instabilities in long-term three-dimensional simulations of neutrino-driven supernovae of 13 red supergiant progenitors*, Preprint, [arXiv:2511.11796](https://arxiv.org/abs/2511.11796){:target="_blank"}.
 
-3. F. Cipolletta, J.V. Kalinani, E. Giangrandi, B. Giacomazzo, R. Ciolfi, L. Sala, **B. Giudici**, *Spritz: general relativistic magnetohydrodynamics with neutrinos*, Classical and Quantum Gravity, vol. 38, no. 8, p. 085021, Mar. 2021, **DOI** [10.1088/1361-6382/abebb7](https://iopscience.iop.org/article/10.1088/1361-6382/abebb7){:target="_blank"}.
+3. S. Orlando, M. Miceli, M. Ono, S. Nagataki, M.-A. Aloy, F. Bocchino, M. Gabler, **B. Giudici**, R. Giuffrida, E. Greco, G. La Malfa, S.-H. Lee, M. Obergaulinger, O. Petruk, V. Sapienza, S. Ustamujic, J. Weng, *Tracing the ejecta structure of SN 1987A: Insights and diagnostics from 3D MHD simulations*, Astronomy & Astrophysics, vol. 699 no. A305, Jul. 2025, **DOI** [10.1051/0004-6361/202554862](https://doi.org/10.1051/0004-6361/202554862){:target="_blank"}.
+
+4. F. Cipolletta, J.V. Kalinani, E. Giangrandi, B. Giacomazzo, R. Ciolfi, L. Sala, **B. Giudici**, *Spritz: general relativistic magnetohydrodynamics with neutrinos*, Classical and Quantum Gravity, vol. 38, no. 8, p. 085021, Mar. 2021, **DOI** [10.1088/1361-6382/abebb7](https://iopscience.iop.org/article/10.1088/1361-6382/abebb7){:target="_blank"}.
 
 ---
 
